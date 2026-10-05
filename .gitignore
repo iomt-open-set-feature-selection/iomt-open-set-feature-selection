@@ -1,0 +1,11 @@
+
+# v2
+data/processed/streams/*
+!data/processed/streams_manifest.json
+!results/rankings/
+!results/audit/
+!results/aggregated/
+results/raw/*
+runs/*
+figures/*
+!**/.gitkeep
