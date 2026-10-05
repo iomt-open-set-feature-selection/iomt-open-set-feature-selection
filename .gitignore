@@ -1,0 +1,37 @@
+# data: never versioned, except the listed files
+data/raw/*
+!data/raw/CHECKSUMS
+data/interim/*
+data/processed/streams/*
+
+# run outputs
+results/raw/*
+runs/*
+figures/*
+
+# keep empty folders
+!**/.gitkeep
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# large binaries
+*.pcap
+*.pcapng
+*.parquet
+*.pt
+*.pth
+*.npz
+*.ckpt
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
