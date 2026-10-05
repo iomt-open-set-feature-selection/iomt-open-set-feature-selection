@@ -1,0 +1,39 @@
+# Replace @Adithyaa-06 with your partner's handle. Check @rana-rishith.
+# Order matters: the last matching line wins.
+
+# Shared: changes here alter what every number means
+*                                   @rana-rishith @Adithyaa-06
+/protocol/                          @rana-rishith @Adithyaa-06
+/src/iomt/contracts.py              @rana-rishith @Adithyaa-06
+/src/iomt/protocol.py               @rana-rishith @Adithyaa-06
+/src/iomt/stubs.py                  @rana-rishith @Adithyaa-06
+/.github/                           @rana-rishith @Adithyaa-06
+
+# Person A: streams, detection, RQ1, stats, replication
+/src/iomt/streams/                  @rana-rishith
+/src/iomt/detectors/                @rana-rishith
+/src/iomt/validity/                 @rana-rishith
+/src/iomt/experiments/              @rana-rishith
+/src/iomt/analysis/stats.py         @rana-rishith
+/src/iomt/replication/              @rana-rishith
+/data/processed/streams_manifest.json @Adithyaa-06
+
+# Person B: audit, selection, closed-set, RQ2, RQ3
+/src/iomt/ramps/                    @Adithyaa-06
+/src/iomt/audit/                    @Adithyaa-06
+/src/iomt/selection/                @Adithyaa-06
+/src/iomt/closedset/                @Adithyaa-06
+/src/iomt/info/                     @Adithyaa-06
+/src/iomt/analysis/rq3.py           @Adithyaa-06
+
+# Handoff artefacts: the receiver reviews
+/results/rankings/                  @rana-rishith
+/results/audit/                     @rana-rishith
+
+# Gates: the closer reviews, not the owner
+/tests/gates/test_gate_1_stream_count.py    @Adithyaa-06
+/tests/gates/test_gate_2_one_stream.py      @Adithyaa-06
+/tests/gates/test_gate_3_attack_classes.py  @rana-rishith
+/tests/gates/test_gate_4_block_size.py      @rana-rishith
+/tests/gates/test_gate_5_run_length.py      @Adithyaa-06
+/tests/gates/test_gate_6_phases.py          @Adithyaa-06

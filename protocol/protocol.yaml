@@ -1,0 +1,79 @@
+# Protocol v2: onset-delay study.
+# Frozen together, in one sitting, before any detector sees attack traffic.
+# Every `null` must be filled at the freeze. Do not hash the file
+# while any `null` remains.
+
+version: 2
+title: "Before the Device Goes Dark: feature compression and detection delay"
+frozen_on: null            # YYYY-MM-DD, at the freeze
+
+datasets:
+  primary: CICIoMT2024
+  slow_source: IoMT-TrafficData
+  cross_capture: CICIoT2023     # optional, fallback or extension only
+
+# Copy the 45 column names from the released CICIoMT2024 CSV header.
+# Paste them; do not type them from memory.
+features: null
+
+# Fixed now, before results. Every class is reported, whatever the result.
+attack_set:
+  non_flood:
+    - id: recon
+      captures: null       # list of capture files mapped to this family
+    - id: malformed_mqtt
+      captures: null
+    - id: arp_spoofing
+      captures: null
+  ramps:
+    - id: ramp_syn_flood
+      base_capture: null
+      ramp_seconds: null   # list of ramp durations
+    - id: ramp_mqtt_publish_flood
+      base_capture: null
+      ramp_seconds: null
+  floor:                   # fixed-rate floods, reported separately
+    captures: null
+
+streams:
+  window_seconds: null
+  splice_at: natural_capture_boundaries
+  splice_classifier:
+    chance: 0.5
+    min_power: 0.8         # power to detect AUC of chance + effect below
+    effect: null           # smallest AUC departure we must be able to see
+
+selection:
+  selectors: [mi, lgbm_importance, binary_mi]
+  k_grid: null             # e.g. [45, 36, 30, 24, 18, 12, 9, 6]; agree at freeze
+  held_out_rule: leave_one_family_out
+  seeds: null
+
+score:
+  trained_on: benign_only
+  model: null              # e.g. isolation_forest | autoencoder; pick at freeze
+
+detectors:
+  names: [conformal_e, cusum, threshold]
+  nominal_arl_windows: null        # target average run length between false alarms
+  calibration_split: held_out_benign
+  detection_horizon_seconds: null  # misses beyond this count as misses
+
+validity:
+  acf_threshold: null      # |ACF| below this at the block lag
+  run_length_tolerance: null       # measured/nominal must lie within [1 - t, 1 + t]
+
+statistics:
+  alpha: 0.05
+  correction: holm
+  equivalence_margin: null # in delay-inflation units; set now so a flat result counts
+  unit: attack_nested_in_family
+
+gate:
+  min_streams: 10
+  min_non_flood_classes: 3
+  min_attacks_per_class: null
+
+extended:
+  rq4_delay_aware_selection: false
+  rq5_lifecycle_phases: false      # true only if gate item 6 passes

@@ -1,11 +1,37 @@
-
-# v2
+# data: never versioned, except the listed files
+data/raw/*
+!data/raw/CHECKSUMS
+data/interim/*
 data/processed/streams/*
-!data/processed/streams_manifest.json
-!results/rankings/
-!results/audit/
-!results/aggregated/
+
+# run outputs
 results/raw/*
 runs/*
 figures/*
+
+# keep empty folders
 !**/.gitkeep
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# large binaries
+*.pcap
+*.pcapng
+*.parquet
+*.pt
+*.pth
+*.npz
+*.ckpt
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
