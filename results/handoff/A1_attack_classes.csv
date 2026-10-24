@@ -1,0 +1,16 @@
+level,class,attacks,attacker_packets,devices,enough,captures,released_csv_rows
+family,recon,32.0,592448.0,Blink_Camera;Ecobee_Camera;M1T_Camera;Multifunctional_Pager;Owltron_Camera;SenseU;Singcall;broker;dev_192_168_137_243,True,,
+family,malformed_mqtt,2.0,6368.0,broker,False,,
+family,arp_spoofing,7.0,262.0,Blink_Camera;Ecobee_Camera;M1T_Camera;Multifunctional_Pager;Owltron_Camera;Singcall,True,,
+subtype,ARP_Spoofing,7.0,,,True,,
+subtype,MQTT-Malformed_Data,2.0,,,False,,
+subtype,Recon-OS_Scan,10.0,,,True,,
+subtype,Recon-Ping_Sweep,2.0,,,False,,
+subtype,Recon-Port_Scan,11.0,,,True,,
+subtype,Recon-VulScan,9.0,,,True,,
+flood_floor,mqtt_connect_flood,,,,,4.0,230856.0
+flood_floor,mqtt_publish_flood,,,,,4.0,88920.0
+flood_floor,icmp_flood,,,,,16.0,2401899.0
+flood_floor,syn_flood,,,,,10.0,1514857.0
+flood_floor,tcp_flood,,,,,9.0,1367447.0
+flood_floor,udp_flood,,,,,15.0,2702529.0

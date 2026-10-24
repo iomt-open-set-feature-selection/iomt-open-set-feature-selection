@@ -1,0 +1,572 @@
+{
+ "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "feature_set": "ciciomt39",
+ "capture_id": "profiling/Idle/Idle",
+ "csv_path": "C:\\Users\\ranar\\Downloads\\IOMT\\DATASETS\\CICIoMT2024\\WiFI_and_MQTT\\profiling\\CSV\\Idle.pcap.csv",
+ "csv_header": [
+  "Header_Length",
+  "Protocol Type",
+  "Time_To_Live",
+  "Rate",
+  "fin_flag_number",
+  "syn_flag_number",
+  "rst_flag_number",
+  "psh_flag_number",
+  "ack_flag_number",
+  "ece_flag_number",
+  "cwr_flag_number",
+  "ack_count",
+  "syn_count",
+  "fin_count",
+  "rst_count",
+  "HTTP",
+  "HTTPS",
+  "DNS",
+  "Telnet",
+  "SMTP",
+  "SSH",
+  "IRC",
+  "TCP",
+  "UDP",
+  "DHCP",
+  "ARP",
+  "ICMP",
+  "IGMP",
+  "IPv",
+  "LLC",
+  "Tot sum",
+  "Min",
+  "Max",
+  "AVG",
+  "Std",
+  "Tot size",
+  "IAT",
+  "Number",
+  "Variance"
+ ],
+ "header_matches_protocol": true,
+ "deterministic_features": [
+  "Protocol Type",
+  "Time_To_Live",
+  "Header_Length",
+  "fin_flag_number",
+  "syn_flag_number",
+  "rst_flag_number",
+  "psh_flag_number",
+  "ack_flag_number",
+  "ece_flag_number",
+  "cwr_flag_number",
+  "ack_count",
+  "syn_count",
+  "fin_count",
+  "rst_count",
+  "HTTP",
+  "HTTPS",
+  "DNS",
+  "Telnet",
+  "SMTP",
+  "SSH",
+  "IRC",
+  "DHCP",
+  "TCP",
+  "UDP",
+  "ARP",
+  "ICMP",
+  "IGMP",
+  "IPv",
+  "LLC",
+  "Tot sum",
+  "Min",
+  "Max",
+  "AVG",
+  "Std",
+  "Tot size",
+  "Number",
+  "Variance"
+ ],
+ "best": {
+  "csv_rows": 32689,
+  "our_rows": 32686,
+  "aligned_rows": 3546,
+  "aligned_fraction": 0.10847685765853957,
+  "features": {
+   "Header_Length": {
+    "match_fraction": 0.1844331641285956,
+    "median_rel_error": 0.11320754716981125,
+    "spearman": 0.627253274273977,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Protocol Type": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 1.0,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Time_To_Live": {
+    "match_fraction": 0.015228426395939087,
+    "median_rel_error": 0.27638778100573486,
+    "spearman": 0.10692692855762118,
+    "quantile_rel_diff": 0.0005567928730511933,
+    "csv_finite_fraction": 1.0
+   },
+   "Rate": {
+    "match_fraction": 0.0005640157924421884,
+    "median_rel_error": NaN,
+    "spearman": null,
+    "quantile_rel_diff": 0.10201701306629138,
+    "csv_finite_fraction": 0.9993881733916608
+   },
+   "fin_flag_number": {
+    "match_fraction": 0.6367738296672307,
+    "median_rel_error": 0.0,
+    "spearman": 0.0842106718704586,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "syn_flag_number": {
+    "match_fraction": 0.6345177664974619,
+    "median_rel_error": 0.0,
+    "spearman": 0.17081367999746466,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "rst_flag_number": {
+    "match_fraction": 0.802312464749013,
+    "median_rel_error": 0.0,
+    "spearman": 0.08171727435834251,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "psh_flag_number": {
+    "match_fraction": 0.2428087986463621,
+    "median_rel_error": 0.4,
+    "spearman": 0.42273077665297615,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "ack_flag_number": {
+    "match_fraction": 0.6979695431472082,
+    "median_rel_error": 0.0,
+    "spearman": 0.9230163354532037,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "ece_flag_number": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "cwr_flag_number": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "ack_count": {
+    "match_fraction": 0.6974055273547659,
+    "median_rel_error": 0.0,
+    "spearman": 0.9218246302616095,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "syn_count": {
+    "match_fraction": 0.6345177664974619,
+    "median_rel_error": 0.0,
+    "spearman": 0.17081367999746466,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "fin_count": {
+    "match_fraction": 0.6367738296672307,
+    "median_rel_error": 0.0,
+    "spearman": 0.0842106718704586,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "rst_count": {
+    "match_fraction": 0.802312464749013,
+    "median_rel_error": 0.0,
+    "spearman": 0.08171727435834251,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "HTTP": {
+    "match_fraction": 0.8812746756909193,
+    "median_rel_error": 0.0,
+    "spearman": 0.11947056546269222,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "HTTPS": {
+    "match_fraction": 0.2955442752397067,
+    "median_rel_error": 0.4,
+    "spearman": 0.32941365348478074,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "DNS": {
+    "match_fraction": 0.55668358714044,
+    "median_rel_error": 0.0,
+    "spearman": 0.6112231429509489,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Telnet": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "SMTP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "SSH": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "IRC": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "TCP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 0.9999999999999999,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "UDP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 1.0,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "DHCP": {
+    "match_fraction": 0.9159616469261139,
+    "median_rel_error": 0.0,
+    "spearman": 0.06934920294673298,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "ARP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 1.0,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "ICMP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 1.0,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "IGMP": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "IPv": {
+    "match_fraction": 1.0,
+    "median_rel_error": 0.0,
+    "spearman": 1.0,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "LLC": {
+    "match_fraction": 0.9627749576988156,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Tot sum": {
+    "match_fraction": 0.007332205301748449,
+    "median_rel_error": 0.39142595018112736,
+    "spearman": 0.10692327848504081,
+    "quantile_rel_diff": 0.001271186440677966,
+    "csv_finite_fraction": 1.0
+   },
+   "Min": {
+    "match_fraction": 0.5459672870840383,
+    "median_rel_error": 0.0,
+    "spearman": 0.10570199939929949,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Max": {
+    "match_fraction": 0.11985335589396504,
+    "median_rel_error": 0.6537634408602151,
+    "spearman": 0.0530210107959092,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "AVG": {
+    "match_fraction": 0.007332205301748449,
+    "median_rel_error": 0.3913759375951786,
+    "spearman": 0.10720669952003808,
+    "quantile_rel_diff": 0.001352569882777328,
+    "csv_finite_fraction": 1.0
+   },
+   "Std": {
+    "match_fraction": 0.009870276367738297,
+    "median_rel_error": 0.6815489296332241,
+    "spearman": 0.07831690096687964,
+    "quantile_rel_diff": 0.0008779224319808854,
+    "csv_finite_fraction": 0.9999694086695831
+   },
+   "Tot size": {
+    "match_fraction": 0.007332205301748449,
+    "median_rel_error": 0.3913759375951786,
+    "spearman": 0.10720669952003808,
+    "quantile_rel_diff": 0.001352569882777328,
+    "csv_finite_fraction": 1.0
+   },
+   "IAT": {
+    "match_fraction": 0.0,
+    "median_rel_error": 0.6724507445429229,
+    "spearman": 0.4922609048273224,
+    "quantile_rel_diff": 0.02956725046949287,
+    "csv_finite_fraction": 1.0
+   },
+   "Number": {
+    "match_fraction": 0.9994359842075579,
+    "median_rel_error": 0.0,
+    "spearman": null,
+    "quantile_rel_diff": 0.0,
+    "csv_finite_fraction": 1.0
+   },
+   "Variance": {
+    "match_fraction": 0.009588268471517203,
+    "median_rel_error": 0.9185527304011972,
+    "spearman": 0.078313011956245,
+    "quantile_rel_diff": 0.0017550739323184317,
+    "csv_finite_fraction": 0.9999694086695831
+   }
+  },
+  "variant": {
+   "packet_filter": "ipv4_or_arp",
+   "length_field": "frame",
+   "std_ddof": 1
+  },
+  "deterministic_min_match": 0.007332205301748449,
+  "deterministic_mean_match": 0.6568649868142253,
+  "deterministic_unmeasured": [],
+  "deterministic_max_quantile_diff": 0.0017550739323184317,
+  "row_count_ratio": 0.9999082260087491
+ },
+ "variants": [
+  {
+   "csv_rows": 32689,
+   "our_rows": 32892,
+   "aligned_rows": 3512,
+   "aligned_fraction": 0.10743675242436293,
+   "variant": {
+    "packet_filter": "all",
+    "length_field": "frame",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.002562642369020501,
+   "deterministic_mean_match": 0.6550975804962139,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.10362604492480007,
+   "row_count_ratio": 1.0062100400746428
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32892,
+   "aligned_rows": 3512,
+   "aligned_fraction": 0.10743675242436293,
+   "variant": {
+    "packet_filter": "all",
+    "length_field": "frame",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.003986332574031891,
+   "deterministic_mean_match": 0.6552284060826203,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.0048382173367845956,
+   "row_count_ratio": 1.0062100400746428
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32892,
+   "aligned_rows": 3512,
+   "aligned_fraction": 0.10743675242436293,
+   "variant": {
+    "packet_filter": "all",
+    "length_field": "ip",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.6363664347719017,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 1.0062100400746428
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32892,
+   "aligned_rows": 3512,
+   "aligned_fraction": 0.10743675242436293,
+   "variant": {
+    "packet_filter": "all",
+    "length_field": "ip",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.6364587822446592,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 1.0062100400746428
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32870,
+   "aligned_rows": 3485,
+   "aligned_fraction": 0.10661078650310502,
+   "variant": {
+    "packet_filter": "ip_or_arp",
+    "length_field": "frame",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.0028694404591104736,
+   "deterministic_mean_match": 0.6574586063825663,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.10144506083775473,
+   "row_count_ratio": 1.0055370308054696
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32870,
+   "aligned_rows": 3485,
+   "aligned_fraction": 0.10661078650310502,
+   "variant": {
+    "packet_filter": "ip_or_arp",
+    "length_field": "frame",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.0037302725968436155,
+   "deterministic_mean_match": 0.6576059560277637,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.004550478726397372,
+   "row_count_ratio": 1.0055370308054696
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32870,
+   "aligned_rows": 3485,
+   "aligned_fraction": 0.10661078650310502,
+   "variant": {
+    "packet_filter": "ip_or_arp",
+    "length_field": "ip",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.638690914731087,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 1.0055370308054696
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32870,
+   "aligned_rows": 3485,
+   "aligned_fraction": 0.10661078650310502,
+   "variant": {
+    "packet_filter": "ip_or_arp",
+    "length_field": "ip",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.6388692853542207,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 1.0055370308054696
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32686,
+   "aligned_rows": 3546,
+   "aligned_fraction": 0.10847685765853957,
+   "variant": {
+    "packet_filter": "ipv4_or_arp",
+    "length_field": "frame",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.0056401579244218835,
+   "deterministic_mean_match": 0.6566515754333012,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.0993087426315173,
+   "row_count_ratio": 0.9999082260087491
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32686,
+   "aligned_rows": 3546,
+   "aligned_fraction": 0.10847685765853957,
+   "variant": {
+    "packet_filter": "ipv4_or_arp",
+    "length_field": "frame",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.007332205301748449,
+   "deterministic_mean_match": 0.6568649868142253,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.0017550739323184317,
+   "row_count_ratio": 0.9999082260087491
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32686,
+   "aligned_rows": 3546,
+   "aligned_fraction": 0.10847685765853957,
+   "variant": {
+    "packet_filter": "ipv4_or_arp",
+    "length_field": "ip",
+    "std_ddof": 0
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.638069541622841,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 0.9999082260087491
+  },
+  {
+   "csv_rows": 32689,
+   "our_rows": 32686,
+   "aligned_rows": 3546,
+   "aligned_fraction": 0.10847685765853957,
+   "variant": {
+    "packet_filter": "ipv4_or_arp",
+    "length_field": "ip",
+    "std_ddof": 1
+   },
+   "deterministic_min_match": 0.0,
+   "deterministic_mean_match": 0.6382372219935671,
+   "deterministic_unmeasured": [],
+   "deterministic_max_quantile_diff": 0.3,
+   "row_count_ratio": 0.9999082260087491
+  }
+ ]
+}

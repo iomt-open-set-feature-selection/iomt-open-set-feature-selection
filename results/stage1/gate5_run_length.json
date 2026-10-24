@@ -1,0 +1,44 @@
+{
+ "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "block_windows": 10,
+ "tolerance": 0.2,
+ "min_alarms_for_audit": 30,
+ "calibration": {
+  "method": "contiguous"
+ },
+ "pooled": {
+  "conformal_e/calibrated": {
+   "audit_blocks": 63608,
+   "alarms": 409,
+   "measured_arl_blocks": 155.520782396088,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.8640043466449334
+  },
+  "cusum/calibrated": {
+   "audit_blocks": 63608,
+   "alarms": 518,
+   "measured_arl_blocks": 122.79536679536679,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.6821964821964822
+  },
+  "threshold/calibrated": {
+   "audit_blocks": 63608,
+   "alarms": 666,
+   "measured_arl_blocks": 95.50750750750751,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.5305972639305973
+  },
+  "conformal_e/theory": {
+   "audit_blocks": 63608,
+   "alarms": 840,
+   "measured_arl_blocks": 75.72380952380952,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.42068783068783067
+  }
+ },
+ "check_a_calibrated_within_tolerance": true,
+ "check_a_inconclusive_too_few_alarms": false,
+ "check_b_theory_threshold_valid": false,
+ "passes": false,
+ "note": ""
+}
