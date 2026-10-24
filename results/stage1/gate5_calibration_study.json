@@ -1,0 +1,648 @@
+{
+ "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "block_windows": 10,
+ "nominal_arl_blocks": 180.0,
+ "inner_split": [
+  0.5,
+  0.5
+ ],
+ "min_alarms": 30,
+ "rule": "among candidates with no failed device and >= validity.min_alarms_for_audit pooled check-half alarms, smallest |log(measured/nominal)| for the conformal e-detector; ties to the earlier candidate",
+ "audit_split_read": false,
+ "pooled": [
+  {
+   "order": 0,
+   "candidate": "mbb10",
+   "config": {
+    "method": "mbb",
+    "mbb_len_blocks": 10
+   },
+   "devices_ok": 12,
+   "devices_failed": 0,
+   "check_blocks": 31791,
+   "alarms": 245,
+   "measured_arl_blocks": 129.75918367346938,
+   "ratio": 0.7208843537414965
+  },
+  {
+   "order": 1,
+   "candidate": "mbb30",
+   "config": {
+    "method": "mbb",
+    "mbb_len_blocks": 30
+   },
+   "devices_ok": 12,
+   "devices_failed": 0,
+   "check_blocks": 31791,
+   "alarms": 205,
+   "measured_arl_blocks": 155.0780487804878,
+   "ratio": 0.8615447154471544
+  },
+  {
+   "order": 2,
+   "candidate": "mbb90",
+   "config": {
+    "method": "mbb",
+    "mbb_len_blocks": 90
+   },
+   "devices_ok": 12,
+   "devices_failed": 0,
+   "check_blocks": 31791,
+   "alarms": 235,
+   "measured_arl_blocks": 135.2808510638298,
+   "ratio": 0.7515602836879434
+  },
+  {
+   "order": 3,
+   "candidate": "contiguous",
+   "config": {
+    "method": "contiguous"
+   },
+   "devices_ok": 12,
+   "devices_failed": 0,
+   "check_blocks": 31791,
+   "alarms": 153,
+   "measured_arl_blocks": 207.7843137254902,
+   "ratio": 1.1543572984749455
+  }
+ ],
+ "chosen": {
+  "method": "contiguous"
+ },
+ "chosen_label": "contiguous",
+ "diagnostic_marginal_shift": {
+  "detector": "threshold/contiguous",
+  "check_blocks": 31791,
+  "alarms": 146,
+  "ratio": 1.209703196347032,
+  "per_device": [
+   {
+    "device_id": "Blink_Camera",
+    "check_blocks": 2800,
+    "check_alarms": 15,
+    "calibrate_alarms": 15,
+    "ratio": 1.037037037037037
+   },
+   {
+    "device_id": "Ecobee_Camera",
+    "check_blocks": 2945,
+    "check_alarms": 11,
+    "calibrate_alarms": 16,
+    "ratio": 1.4873737373737375
+   },
+   {
+    "device_id": "M1T_Camera",
+    "check_blocks": 2938,
+    "check_alarms": 20,
+    "calibrate_alarms": 16,
+    "ratio": 0.8161111111111111
+   },
+   {
+    "device_id": "Multifunctional_Pager",
+    "check_blocks": 2943,
+    "check_alarms": 15,
+    "calibrate_alarms": 16,
+    "ratio": 1.0899999999999999
+   },
+   {
+    "device_id": "Owltron_Camera",
+    "check_blocks": 2946,
+    "check_alarms": 14,
+    "calibrate_alarms": 16,
+    "ratio": 1.169047619047619
+   },
+   {
+    "device_id": "SenseU",
+    "check_blocks": 2935,
+    "check_alarms": 4,
+    "calibrate_alarms": 16,
+    "ratio": 4.076388888888889
+   },
+   {
+    "device_id": "Singcall",
+    "check_blocks": 1653,
+    "check_alarms": 0,
+    "calibrate_alarms": 9,
+    "ratio": null
+   },
+   {
+    "device_id": "broker",
+    "check_blocks": 2913,
+    "check_alarms": 12,
+    "calibrate_alarms": 16,
+    "ratio": 1.3486111111111112
+   },
+   {
+    "device_id": "dev_192_168_137_185",
+    "check_blocks": 2913,
+    "check_alarms": 15,
+    "calibrate_alarms": 14,
+    "ratio": 1.0788888888888888
+   },
+   {
+    "device_id": "dev_192_168_137_210",
+    "check_blocks": 936,
+    "check_alarms": 3,
+    "calibrate_alarms": 5,
+    "ratio": 1.7333333333333334
+   },
+   {
+    "device_id": "dev_192_168_137_243",
+    "check_blocks": 2959,
+    "check_alarms": 24,
+    "calibrate_alarms": 16,
+    "ratio": 0.6849537037037037
+   },
+   {
+    "device_id": "dev_192_168_137_59",
+    "check_blocks": 2910,
+    "check_alarms": 13,
+    "calibrate_alarms": 11,
+    "ratio": 1.2435897435897436
+   }
+  ],
+  "reading": "ratio well below 1: score tail heavier in the later half (shift, not dependence); calibration cannot fix this"
+ },
+ "per_device": [
+  {
+   "device_id": "Blink_Camera",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 129.8658232758973,
+   "reached": true,
+   "check_blocks": 2800,
+   "check_alarms": 27,
+   "ratio": 0.5761316872427984
+  },
+  {
+   "device_id": "Blink_Camera",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 139.83950655297207,
+   "reached": true,
+   "check_blocks": 2800,
+   "check_alarms": 27,
+   "ratio": 0.5761316872427984
+  },
+  {
+   "device_id": "Blink_Camera",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 147.46914825338047,
+   "reached": true,
+   "check_blocks": 2800,
+   "check_alarms": 25,
+   "ratio": 0.6222222222222222
+  },
+  {
+   "device_id": "Blink_Camera",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 311.4204787184575,
+   "reached": true,
+   "check_blocks": 2800,
+   "check_alarms": 16,
+   "ratio": 0.9722222222222222
+  },
+  {
+   "device_id": "Ecobee_Camera",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 130.1947601490675,
+   "reached": true,
+   "check_blocks": 2945,
+   "check_alarms": 28,
+   "ratio": 0.5843253968253969
+  },
+  {
+   "device_id": "Ecobee_Camera",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 212.41195448974207,
+   "reached": true,
+   "check_blocks": 2945,
+   "check_alarms": 20,
+   "ratio": 0.8180555555555555
+  },
+  {
+   "device_id": "Ecobee_Camera",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 161.32535769830756,
+   "reached": true,
+   "check_blocks": 2945,
+   "check_alarms": 24,
+   "ratio": 0.6817129629629629
+  },
+  {
+   "device_id": "Ecobee_Camera",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 477.2450747301108,
+   "reached": true,
+   "check_blocks": 2945,
+   "check_alarms": 12,
+   "ratio": 1.3634259259259258
+  },
+  {
+   "device_id": "M1T_Camera",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 121.98423612113976,
+   "reached": true,
+   "check_blocks": 2938,
+   "check_alarms": 20,
+   "ratio": 0.8161111111111111
+  },
+  {
+   "device_id": "M1T_Camera",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 146.2616994312705,
+   "reached": true,
+   "check_blocks": 2938,
+   "check_alarms": 18,
+   "ratio": 0.9067901234567901
+  },
+  {
+   "device_id": "M1T_Camera",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 129.61966611809908,
+   "reached": true,
+   "check_blocks": 2938,
+   "check_alarms": 20,
+   "ratio": 0.8161111111111111
+  },
+  {
+   "device_id": "M1T_Camera",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 139.04582683965396,
+   "reached": true,
+   "check_blocks": 2938,
+   "check_alarms": 20,
+   "ratio": 0.8161111111111111
+  },
+  {
+   "device_id": "Multifunctional_Pager",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 482.40371597345893,
+   "reached": true,
+   "check_blocks": 2943,
+   "check_alarms": 10,
+   "ratio": 1.635
+  },
+  {
+   "device_id": "Multifunctional_Pager",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 691.7765248301954,
+   "reached": true,
+   "check_blocks": 2943,
+   "check_alarms": 7,
+   "ratio": 2.335714285714286
+  },
+  {
+   "device_id": "Multifunctional_Pager",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 1394.9600418699472,
+   "reached": true,
+   "check_blocks": 2943,
+   "check_alarms": 6,
+   "ratio": 2.725
+  },
+  {
+   "device_id": "Multifunctional_Pager",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 1038.2367246045883,
+   "reached": true,
+   "check_blocks": 2943,
+   "check_alarms": 6,
+   "ratio": 2.725
+  },
+  {
+   "device_id": "Owltron_Camera",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 126.54176471722704,
+   "reached": true,
+   "check_blocks": 2946,
+   "check_alarms": 22,
+   "ratio": 0.7439393939393939
+  },
+  {
+   "device_id": "Owltron_Camera",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 135.74409525808014,
+   "reached": true,
+   "check_blocks": 2946,
+   "check_alarms": 21,
+   "ratio": 0.7793650793650794
+  },
+  {
+   "device_id": "Owltron_Camera",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 124.39935117700601,
+   "reached": true,
+   "check_blocks": 2946,
+   "check_alarms": 22,
+   "ratio": 0.7439393939393939
+  },
+  {
+   "device_id": "Owltron_Camera",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 239.2294805476618,
+   "reached": true,
+   "check_blocks": 2946,
+   "check_alarms": 15,
+   "ratio": 1.0911111111111111
+  },
+  {
+   "device_id": "SenseU",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 434.32755467444434,
+   "reached": true,
+   "check_blocks": 2935,
+   "check_alarms": 26,
+   "ratio": 0.6271367521367521
+  },
+  {
+   "device_id": "SenseU",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 1574.060730697451,
+   "reached": true,
+   "check_blocks": 2935,
+   "check_alarms": 21,
+   "ratio": 0.7764550264550264
+  },
+  {
+   "device_id": "SenseU",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 289.94177347800166,
+   "reached": true,
+   "check_blocks": 2935,
+   "check_alarms": 29,
+   "ratio": 0.5622605363984674
+  },
+  {
+   "device_id": "SenseU",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 11775.622825575576,
+   "reached": true,
+   "check_blocks": 2935,
+   "check_alarms": 15,
+   "ratio": 1.087037037037037
+  },
+  {
+   "device_id": "Singcall",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 3439.529379609151,
+   "reached": true,
+   "check_blocks": 1653,
+   "check_alarms": 0,
+   "ratio": null
+  },
+  {
+   "device_id": "Singcall",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 11019.06577316311,
+   "reached": true,
+   "check_blocks": 1653,
+   "check_alarms": 0,
+   "ratio": null
+  },
+  {
+   "device_id": "Singcall",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 27918.516270466003,
+   "reached": true,
+   "check_blocks": 1653,
+   "check_alarms": 0,
+   "ratio": null
+  },
+  {
+   "device_id": "Singcall",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 28779.015144771693,
+   "reached": true,
+   "check_blocks": 1653,
+   "check_alarms": 0,
+   "ratio": null
+  },
+  {
+   "device_id": "broker",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 39134.50225309673,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 34,
+   "ratio": 0.4759803921568627
+  },
+  {
+   "device_id": "broker",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 112096.24489959207,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 29,
+   "ratio": 0.5580459770114943
+  },
+  {
+   "device_id": "broker",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 41927.36397120804,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 33,
+   "ratio": 0.49040404040404034
+  },
+  {
+   "device_id": "broker",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 497481968.063273,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 16,
+   "ratio": 1.0114583333333333
+  },
+  {
+   "device_id": "dev_192_168_137_185",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 127.26407069235965,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 11,
+   "ratio": 1.4712121212121212
+  },
+  {
+   "device_id": "dev_192_168_137_185",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 135.3155341559797,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 11,
+   "ratio": 1.4712121212121212
+  },
+  {
+   "device_id": "dev_192_168_137_185",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 132.26957586375912,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 11,
+   "ratio": 1.4712121212121212
+  },
+  {
+   "device_id": "dev_192_168_137_185",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 96.5339719296309,
+   "reached": true,
+   "check_blocks": 2913,
+   "check_alarms": 16,
+   "ratio": 1.0114583333333333
+  },
+  {
+   "device_id": "dev_192_168_137_210",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 338.1058883514668,
+   "reached": true,
+   "check_blocks": 936,
+   "check_alarms": 15,
+   "ratio": 0.3466666666666667
+  },
+  {
+   "device_id": "dev_192_168_137_210",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 288.84366159672624,
+   "reached": true,
+   "check_blocks": 936,
+   "check_alarms": 15,
+   "ratio": 0.3466666666666667
+  },
+  {
+   "device_id": "dev_192_168_137_210",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 212.8153402148057,
+   "reached": true,
+   "check_blocks": 936,
+   "check_alarms": 16,
+   "ratio": 0.325
+  },
+  {
+   "device_id": "dev_192_168_137_210",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 6027.2728155780005,
+   "reached": true,
+   "check_blocks": 936,
+   "check_alarms": 8,
+   "ratio": 0.65
+  },
+  {
+   "device_id": "dev_192_168_137_243",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 2652.2502679200143,
+   "reached": true,
+   "check_blocks": 2959,
+   "check_alarms": 24,
+   "ratio": 0.6849537037037037
+  },
+  {
+   "device_id": "dev_192_168_137_243",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 86493.04786699617,
+   "reached": true,
+   "check_blocks": 2959,
+   "check_alarms": 17,
+   "ratio": 0.9669934640522876
+  },
+  {
+   "device_id": "dev_192_168_137_243",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 29126.911322721662,
+   "reached": true,
+   "check_blocks": 2959,
+   "check_alarms": 18,
+   "ratio": 0.9132716049382716
+  },
+  {
+   "device_id": "dev_192_168_137_243",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 6144013.318276881,
+   "reached": true,
+   "check_blocks": 2959,
+   "check_alarms": 12,
+   "ratio": 1.3699074074074074
+  },
+  {
+   "device_id": "dev_192_168_137_59",
+   "candidate": "mbb10",
+   "status": "ok",
+   "h": 452.8400443107929,
+   "reached": true,
+   "check_blocks": 2910,
+   "check_alarms": 28,
+   "ratio": 0.5773809523809524
+  },
+  {
+   "device_id": "dev_192_168_137_59",
+   "candidate": "mbb30",
+   "status": "ok",
+   "h": 5142.586917054117,
+   "reached": true,
+   "check_blocks": 2910,
+   "check_alarms": 19,
+   "ratio": 0.8508771929824561
+  },
+  {
+   "device_id": "dev_192_168_137_59",
+   "candidate": "mbb90",
+   "status": "ok",
+   "h": 283.41517211848264,
+   "reached": true,
+   "check_blocks": 2910,
+   "check_alarms": 31,
+   "ratio": 0.521505376344086
+  },
+  {
+   "device_id": "dev_192_168_137_59",
+   "candidate": "contiguous",
+   "status": "ok",
+   "h": 14012.476348990755,
+   "reached": true,
+   "check_blocks": 2910,
+   "check_alarms": 17,
+   "ratio": 0.9509803921568628
+  }
+ ]
+}

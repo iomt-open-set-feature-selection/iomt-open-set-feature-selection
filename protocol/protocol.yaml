@@ -2,6 +2,10 @@
 # Frozen together, in one sitting, before any detector sees attack traffic.
 # Every `null` must be filled at the freeze. Do not hash the file
 # while any `null` remains.
+#
+# STAGE 1 DRAFT (Person A, 2026-10-23). Values marked "PROPOSED (A)" are what
+# the Stage 1 gate code runs with. They are proposals for the joint freeze,
+# not decisions. B: change any of them at the freeze and re-run the gates.
 
 version: 2
 title: "Before the Device Goes Dark: feature compression and detection delay"
@@ -10,21 +14,66 @@ frozen_on: null            # YYYY-MM-DD, at the freeze
 datasets:
   primary: CICIoMT2024
   slow_source: IoMT-TrafficData
-  cross_capture: CICIoT2023     # optional, fallback or extension only
+  cross_capture: null      # CICIoT2023 dropped 2026-10-20; fallback needs re-scoping
 
-# Copy the 45 column names from the released CICIoMT2024 CSV header.
-# Paste them; do not type them from memory.
-features: null
+# Feature set. PROPOSED (A): ciciomt39, the 2024 README table and the
+# profiling-CSV header (profiling/CSV/*.pcap.csv). Every feature is defined over
+# the window's own packets. The alternative, cic45, is the attack-CSV header
+# (CICIoT2023 style): it adds Srate (== Rate), Drate (always 0), Magnitue,
+# Radius, Covariance and Weight, names TTL "Duration", and several of its
+# features are flow-cumulative. Decide at the freeze; the k grid tops out at
+# the set size (39 or 45). Gate 2 checks this list against the CSV header.
+feature_set: ciciomt39
+features:
+  - Header_Length
+  - Protocol Type
+  - Time_To_Live
+  - Rate
+  - fin_flag_number
+  - syn_flag_number
+  - rst_flag_number
+  - psh_flag_number
+  - ack_flag_number
+  - ece_flag_number
+  - cwr_flag_number
+  - ack_count
+  - syn_count
+  - fin_count
+  - rst_count
+  - HTTP
+  - HTTPS
+  - DNS
+  - Telnet
+  - SMTP
+  - SSH
+  - IRC
+  - TCP
+  - UDP
+  - DHCP
+  - ARP
+  - ICMP
+  - IGMP
+  - IPv
+  - LLC
+  - Tot sum
+  - Min
+  - Max
+  - AVG
+  - Std
+  - Tot size
+  - IAT
+  - Number
+  - Variance
 
 # Fixed now, before results. Every class is reported, whatever the result.
 attack_set:
   non_flood:
     - id: recon
-      captures: null       # list of capture files mapped to this family
+      captures: [Recon-Ping_Sweep, Recon-VulScan, Recon-OS_Scan, Recon-Port_Scan]   # PROPOSED (A)
     - id: malformed_mqtt
-      captures: null
+      captures: [MQTT-Malformed_Data]                                                # PROPOSED (A)
     - id: arp_spoofing
-      captures: null
+      captures: [ARP_Spoofing]                                                       # PROPOSED (A)
   ramps:
     - id: ramp_syn_flood
       base_capture: null
@@ -36,8 +85,22 @@ attack_set:
     captures: null
 
 streams:
-  window_seconds: null
+  window_seconds: 1.0      # PROPOSED (A): one uniform time window for every class
+  length_field: frame      # PROPOSED (A): packet length = frame length (gate 2 checks frame vs IP length)
+  # PROPOSED (A): divisor for Std and Variance. 1 = sample formula (n-1), which
+  # is what the released CSVs use: at ddof 0 our Std sits 5.1% off the release
+  # and Variance 9.9%, exactly sqrt(10/9)-1 and 10/9-1 for 10-packet chunks; at
+  # ddof 1 both drop to 0.0009 and 0.0018. Gate 2 sweeps both and reports which wins.
+  std_ddof: 1
+  flow_idle_timeout_s: 60      # cic45 only: flow ends after this much silence
+  flow_active_timeout_s: 300   # cic45 only: long flows split so cumulative features stay bounded
   splice_at: natural_capture_boundaries
+  # PROPOSED (A): a capture is cut into recording sessions wherever every device
+  # went silent for this long. profiling/Active spans 435 h of wall clock but
+  # only ~29 h of recording in 9 sessions; without the cut those 406 idle hours
+  # would enter the run-length audit as observed benign time. The captures have
+  # no gap between 60 s and 1 h, so any threshold in that range gives the same cut.
+  session_gap_seconds: 300
   splice_classifier:
     chance: 0.5
     min_power: 0.8         # power to detect AUC of chance + effect below
@@ -51,17 +114,43 @@ selection:
 
 score:
   trained_on: benign_only
-  model: null              # e.g. isolation_forest | autoencoder; pick at freeze
+  model: isolation_forest  # PROPOSED (A); per device, on log1p-scaled window features
 
 detectors:
   names: [conformal_e, cusum, threshold]
-  nominal_arl_windows: null        # target average run length between false alarms
+  nominal_arl_windows: 1800        # PROPOSED (A): 30 min between false alarms at 1 s windows
   calibration_split: held_out_benign
   detection_horizon_seconds: null  # misses beyond this count as misses
+  conformal_e:                     # PROPOSED (A), Bhattacharyya & Ramdas (2026) sum detector
+    thetas: [0.15, 0.30, 0.50, 0.75, 1.0]   # betting grid f(p) = theta * p^(theta-1), uniform prior
+    rho: 0.5                                 # shift; theory gives gamma <= ARL <= gamma / rho
+  cusum:
+    drift_k: 0.5                   # PROPOSED (A), in standardised score units
+  # PROPOSED (A), 2026-10-24, gate 5 adjust loop. How every detector's threshold
+  # is calibrated to the nominal ARL on the tuning blocks. mbb = moving-block
+  # bootstrap with resamples of mbb_len_blocks consecutive block scores (the
+  # 2026-10-23 run used mbb, 10). contiguous = the tuning blocks in real order.
+  # validity/calibration_study.py picks one on the tuning split alone: each
+  # tuning segment is cut by inner_split into a calibrate part and a check part;
+  # among candidates that run on every device and give at least
+  # validity.min_alarms_for_audit pooled check alarms, the conformal e-detector
+  # ratio closest to 1 (smallest |log ratio|) wins, ties to the earlier entry.
+  # The audit split is never read by the study. Calibration cannot change the
+  # theory-threshold check (gate 5 check b).
+  calibration:
+    candidates:
+      - {method: mbb, mbb_len_blocks: 10}
+      - {method: mbb, mbb_len_blocks: 30}
+      - {method: mbb, mbb_len_blocks: 90}
+      - {method: contiguous}
+    inner_split: [0.5, 0.5]
 
 validity:
-  acf_threshold: null      # |ACF| below this at the block lag
-  run_length_tolerance: null       # measured/nominal must lie within [1 - t, 1 + t]
+  acf_threshold: 0.1       # PROPOSED (A): mean |ACF| at the block lag, every device
+  run_length_tolerance: 0.2        # PROPOSED (A): measured/nominal within [0.8, 1.2]
+  block_grid_windows: [1, 2, 3, 5, 10, 15, 20, 30, 45, 60]   # PROPOSED (A)
+  min_alarms_for_audit: 30         # PROPOSED (A): fewer pooled alarms = inconclusive
+  benign_split: [0.4, 0.2, 0.2, 0.2]   # PROPOSED (A): score fit / conformal reference / threshold tuning / audit, chronological within each capture
 
 statistics:
   alpha: 0.05
@@ -72,8 +161,39 @@ statistics:
 gate:
   min_streams: 10
   min_non_flood_classes: 3
-  min_attacks_per_class: null
+  min_attacks_per_class: 5          # PROPOSED (A): fewer than 5 attacks makes a per-family Wilcoxon meaningless
+  # Usable per-device IP stream (gate item 1). PROPOSED (A).
+  usable_stream:
+    min_benign_active_windows: 600     # windows with >= 1 packet, summed over benign captures
+    min_benign_span_seconds: 1800
+    require_attack_presence: true      # device must appear in >= 1 non-flood attack capture
+    min_attack_capture_packets: 50
+  # Gate item 2: re-extracted vs released CSV, on deterministic per-packet features.
+  # PROPOSED (A), CHANGED 2026-10-23 and needs B's agreement at the freeze.
+  # csv_match_min_fraction was a row-by-row match. It is not obtainable: the
+  # released row order cannot be reproduced from the pcap (see csv_match.py), so
+  # that number sits near zero however the features are defined. The distributions
+  # do agree, so the gate now asks that every deterministic feature's quantiles
+  # match within csv_match_max_quantile_diff. The row fraction is still recorded.
+  csv_match_min_fraction: 0.95         # evidence only; no longer gated
+  csv_match_max_quantile_diff: 0.01    # PROPOSED (A): 1% on matched quantiles
+  # Gate item 3: an attack is (capture, target device) with at least this many attacker packets.
+  min_attacker_packets_per_attack: 20  # PROPOSED (A)
+
+# Network layout seen in the CICIoMT2024 Wi-Fi/MQTT captures. PROPOSED (A);
+# confirm against the device inventory before the freeze.
+network:
+  lan_subnets: ["192.168.137.0/24"]   # real Wi-Fi devices behind the capture hotspot
+  sim_subnets: ["10.0.0.0/24"]        # simulated MQTT fleet; never a monitored device
+  mqtt_ports: [1883, 8883]
+  # PROPOSED (A): the attack host, pinned rather than inferred. It sends the bulk
+  # of every non-flood attack capture (385k packets in Recon-Port_Scan_train, the
+  # ARP frames claiming 192.168.137.1 in ARP_Spoofing_train) but also ~98 benign
+  # packets, so "absent from benign captures" misidentifies it. The inferred set
+  # is still reported in device_inventory.json as a cross-check.
+  # fa:3a:d3:4c:e3:37 is attacker-like but appears only in flood captures.
+  attacker_macs: ["dc:a6:32:dc:27:d5"]
 
 extended:
-  rq4_delay_aware_selection: false
-  rq5_lifecycle_phases: false      # true only if gate item 6 passes
+  rq4_delay_aware_selection: true    # core since 2026-10-21
+  rq5_lifecycle_phases: true         # core since 2026-10-21; gate item 6 required

@@ -1,0 +1,3692 @@
+{
+ "feature_set": "ciciomt39",
+ "features": [
+  "Header_Length",
+  "Protocol Type",
+  "Time_To_Live",
+  "Rate",
+  "fin_flag_number",
+  "syn_flag_number",
+  "rst_flag_number",
+  "psh_flag_number",
+  "ack_flag_number",
+  "ece_flag_number",
+  "cwr_flag_number",
+  "ack_count",
+  "syn_count",
+  "fin_count",
+  "rst_count",
+  "HTTP",
+  "HTTPS",
+  "DNS",
+  "Telnet",
+  "SMTP",
+  "SSH",
+  "IRC",
+  "TCP",
+  "UDP",
+  "DHCP",
+  "ARP",
+  "ICMP",
+  "IGMP",
+  "IPv",
+  "LLC",
+  "Tot sum",
+  "Min",
+  "Max",
+  "AVG",
+  "Std",
+  "Tot size",
+  "IAT",
+  "Number",
+  "Variance"
+ ],
+ "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "streams": {
+  "benign__Blink_Camera__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 21747,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "6768224abbf559d489decafd7b776e451702243245ed365a3b7799dfe5bc9da2",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 2415,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "a517914dd28303ed2b3c74d09417fa4df6ecba86bc586d952c9c28f1c8079f3d",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 2370,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "aa3bb1b592283841808447bf6c723bfbf275bfc34d20bd6bb2a71834b836bb34",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 6697,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "63af94b822114a48a3312a7765384442eb3db8dc218b7dd8a2bc63981c9fb60f",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 3047,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "093aa616fe16266224c8acb9c4cf301269954de7d72306fd477b03ca11b496a6",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 2572,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "11b32e1f1008610f9197bafaaf430f359ed26944bd8f8850f154330cbfbe0159",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 3495,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "509ffe660f532ace4447276d5633eed70bbbd2b559fcf143e33f39577cba972b",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 3816,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "985a2a3f5012437c2cb168a3aad437b77f6212854a7aaf1bf6f1445395915f85",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 3196,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "8dadec0f69af81162684adeea0472e330a8be2dffb35dbbc9190f2e675840fb9",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 11651,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "a2b3b026d0678b00cebbb16d90f3893311cd5d19d46bb7b638168ddf821cf755",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 12820,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "2df2b8ff52c18f7b029ec66c6d94ef8566d11d1ebcbf5eada36ae98418243fba",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 12909,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "4a49abd42a768b6d1019aa623ae983049c13cedaa103cbb7a708a4c5e25baa4d",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701097889.535907,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 21455,
+   "n_windows": 350,
+   "phase": "interaction",
+   "phase_detail": "Blink_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 349.36821603775024,
+   "sha256": "f174bfd63a9fbe1c8bdaadc48b9c791d0c865bec518cd3aefc6cb10e0e860792",
+   "source_captures": [
+    "profiling/Interactions/Blink_Camera/Blink_Camera_LAN_MIC"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701096470.826135,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 18821,
+   "n_windows": 364,
+   "phase": "interaction",
+   "phase_detail": "Blink_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 363.34905910491943,
+   "sha256": "89cb34392ff179a8ae668b20491030588d93e73a8b24410e28b62d4a8f148175",
+   "source_captures": [
+    "profiling/Interactions/Blink_Camera/Blink_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_WAN_MIC__s0": {
+   "capture_t0": 1701097506.84481,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_WAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 22173,
+   "n_windows": 325,
+   "phase": "interaction",
+   "phase_detail": "Blink_Camera_WAN_MIC",
+   "session": 0,
+   "session_seconds": 324.9942169189453,
+   "sha256": "7d26c876fe96816eb850fd53567fc4bab2644ff3952b7dc5844c3f7ca3869197",
+   "source_captures": [
+    "profiling/Interactions/Blink_Camera/Blink_Camera_WAN_MIC"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_WAN_WATCH__s0": {
+   "capture_t0": 1701097105.152293,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~Blink_Camera~Blink_Camera_WAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 15857,
+   "n_windows": 367,
+   "phase": "interaction",
+   "phase_detail": "Blink_Camera_WAN_WATCH",
+   "session": 0,
+   "session_seconds": 366.92230701446533,
+   "sha256": "7fc7fffa9f9c4963125bce7f8247702caae04bf3111447cb212967c353e6de73",
+   "source_captures": [
+    "profiling/Interactions/Blink_Camera/Blink_Camera_WAN_WATCH"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0": {
+   "capture_t0": 1701098711.521506,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 9,
+   "n_windows": 267,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_PHOTO",
+   "session": 0,
+   "session_seconds": 266.46105003356934,
+   "sha256": "dee5eb342d5220890644d544a25fe8923a5a6465c39382cb07d06099282613cd",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PHOTO"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0": {
+   "capture_t0": 1701099001.653523,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 20,
+   "n_windows": 356,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_PRECORDING",
+   "session": 0,
+   "session_seconds": 355.7326910495758,
+   "sha256": "d9fd3566dc1f92d50a09a4c00cbb9435523c63f12afd2b44521c701df8066d80",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PRECORDING"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 12,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "4c282de5f587de671c8508df8013013ecc927772ee6e969ab9711918ecb09594",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Power~Blink_Mini_Camera_Power__s0": {
+   "capture_t0": 1698250880.852573,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Power~Blink_Mini_Camera_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 199,
+   "n_windows": 384,
+   "phase": "background_power",
+   "phase_detail": "Blink_Mini_Camera_Power",
+   "session": 0,
+   "session_seconds": 383.86687302589417,
+   "sha256": "6685a9f2c5144690194861d23d0945adfd035b9aaafcb544d8c7b3e8f1f5ad14",
+   "source_captures": [
+    "profiling/Power/Blink_Mini_Camera_Power"
+   ]
+  },
+  "benign__Blink_Camera__profiling~Power~Blink_Mini_Camera_Power__s1": {
+   "capture_t0": 1698252057.864267,
+   "device_id": "Blink_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Blink_Camera__profiling~Power~Blink_Mini_Camera_Power__s1.parquet",
+   "kind": "benign",
+   "n_packets": 369,
+   "n_windows": 762,
+   "phase": "background_power",
+   "phase_detail": "Blink_Mini_Camera_Power",
+   "session": 1,
+   "session_seconds": 761.053867816925,
+   "sha256": "189f03c481c5db290be8c910ef4459720d4b8b0a449f0f26a0f570655e17ffb8",
+   "source_captures": [
+    "profiling/Power/Blink_Mini_Camera_Power"
+   ]
+  },
+  "benign__Ecobee_Camera__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 19,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "d07d0aa7e46181dd175531f15cadb44f62ed51a4079e073e69b4becb6ab0db95",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__Ecobee_Camera__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 141746,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "c2e158bd457d955e05f546454898c7b072811f887bdf848f9ef0370303c4fffb",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 38032,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "1cc4f9b8b4fdbf972b7efa61777d908554eaba47ff1356cafc7885486941ba4b",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 47106,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "52dbc11047256eb34791a0822db2274650c098ef8ac33301c9c92bbfb7638924",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 23145,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "0580d931ec647a83a7cfdd702831fbd58d589531e39c450e54866846ab8d4b4e",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 18368,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "5285aaaba2675f675fe6dbed4a9b4c6d1cb5f79f5135a02b6089f7a4cce15fb3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 34495,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "acb20408f80f221faa3060f058d3960bfb0a7e1c65e0748b53c383745fa2bded",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 30163,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "857716b109983678457752ddac08aa56af4a8012d191cc881343f8296c0d1c31",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 65884,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "650c01e5ba77131905a68d06bce64c77152ba2071a090184d76e124dcbcaeecf",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 29960,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "60f28818531d66f5121273bdeedcb9dd29b77314fa81c259e5735318ea5b5c43",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 34081,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "8e447dff6b8b0ddfb06fb80c9542c47a1132e5513de7ef69682d4e1e032b96df",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 53330,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "2667756108603fcfb444649bc0994c27c5c1c3ee1a6605b388d5d627cb3a13d7",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 53125,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "53a7eb963d06b086e1aeff94701707ea447c44c71c1cdcb6ba681b4dccf06b1e",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701176125.716126,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 38731,
+   "n_windows": 349,
+   "phase": "interaction",
+   "phase_detail": "Ecobee_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 348.44771003723145,
+   "sha256": "8a99dcb35280cae32185bec0e93c30e3065cbbbc9f4926c6e192aee6b60ceb2a",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_MIC"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701094819.549751,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 22534,
+   "n_windows": 388,
+   "phase": "interaction",
+   "phase_detail": "Ecobee_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 387.7277069091797,
+   "sha256": "70e729463e5f609d609f558b92b3934d555b10dc50ec6d3b90cb13f6ae591941",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s1": {
+   "capture_t0": 1701095813.962749,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s1.parquet",
+   "kind": "benign",
+   "n_packets": 14113,
+   "n_windows": 121,
+   "phase": "interaction",
+   "phase_detail": "Ecobee_Camera_LAN_WATCH",
+   "session": 1,
+   "session_seconds": 120.69712400436401,
+   "sha256": "ea7abf2f6071ada42f3573ed2180fa4c63981ae05124098ba72dfcbe13d35c84",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_WAN_MIC__s0": {
+   "capture_t0": 1701176570.08818,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_WAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 35853,
+   "n_windows": 360,
+   "phase": "interaction",
+   "phase_detail": "Ecobee_Camera_WAN_MIC",
+   "session": 0,
+   "session_seconds": 359.74331998825073,
+   "sha256": "819a0f974a2d0fce332bfa00cdde78592d391eca389344fb180d49dc97f27369",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_MIC"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_WAN_WATCH__s0": {
+   "capture_t0": 1701095997.008527,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_WAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 33376,
+   "n_windows": 388,
+   "phase": "interaction",
+   "phase_detail": "Ecobee_Camera_WAN_WATCH",
+   "session": 0,
+   "session_seconds": 387.39066195487976,
+   "sha256": "ba33d985551f95e01fee79cc774c6e8276db2e5659c0718e5f5c99609fd10ad4",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_WAN_WATCH"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 58,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "93201a76d95cd8d9f26888d3bf1be207aff4c184c1a2e3007c8c8c258ede1815",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Ecobee_Camera__profiling~Power~Ecobee_Camera_Power__s0": {
+   "capture_t0": 1698248525.918281,
+   "device_id": "Ecobee_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Ecobee_Camera__profiling~Power~Ecobee_Camera_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 2651,
+   "n_windows": 1662,
+   "phase": "power",
+   "phase_detail": "Ecobee_Camera_Power",
+   "session": 0,
+   "session_seconds": 1661.3190698623657,
+   "sha256": "f7bd1a7dcd8aa6768346e78eb25de65a1679b2a43b7996a6325d8e200bba257b",
+   "source_captures": [
+    "profiling/Power/Ecobee_Camera_Power"
+   ]
+  },
+  "benign__M1T_Camera__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 4,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "c5f893aedf7e9f7d8cf412951ef719877c5bdf5dcf551d757f01e30c67390116",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__M1T_Camera__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 26139,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "fb8772cb1aa8226305a09f7e86143f86101e8e00d548da6361d81c4812802f3d",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 5193,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "ee69afaa8d7c56acaf10a71f51bf1de5861054c95c5abc6eecf6f4a9adb06436",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 5910,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "6f65ee08adb0c7bec6f159da23a83e4bda13e259dc4934210c3c50047a843ea6",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 4003,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "732c1260ac136500b6b3f1daefe645f2b4c243508d161682fce31a9a03e35565",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 2002,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "183a6103f0ed58574c3bc1add2a049f0c15e6324b8f53f12a7f0b2a857a7e5eb",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 13316,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "6709b9f80d8575872935482a4f7de6bb0e08dd6b86e75620fc43d9d4f27d157d",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 2055,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "f6c55bd7573bdc5c29e5fc7fad852312442104401459a15882b1e49ec4852f1a",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 2237,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "4a0c3168b55fd6bae96b80d7481c5a40e3640e8351c1566a79d3600667c391f3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 2457,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "02cab4c5875794c117308c960b573a7eb91bcbca31992e46fb29d399911278f9",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 246166,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "a4d7a2a9fb8c2c28cd1653f266c08ba0e82071d36ad8eba2d915c6b6e5575496",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 8154,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "c4ab9ea6860306a3fda18361d9c267261a9384368298c80ca7b0a5cb4b96ec69",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 8125,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "b6064521370cd9d7a7ce93aaca1070aed084296076f2aa0f5658c8302a9815e3",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701099387.003639,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 16106,
+   "n_windows": 474,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 473.64202308654785,
+   "sha256": "3726e3cb0702429dcab6e9574a401338a142e9c0445381b433988cb33fa80e8e",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_MIC"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0": {
+   "capture_t0": 1701098711.521506,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 1430,
+   "n_windows": 267,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_LAN_PHOTO",
+   "session": 0,
+   "session_seconds": 266.46105003356934,
+   "sha256": "e3fcb5de6bbda7b42fb31195a9d6c6679bb880ea99d4f3876cecf6be591f26f6",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PHOTO"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0": {
+   "capture_t0": 1701099001.653523,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 8464,
+   "n_windows": 356,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_LAN_PRECORDING",
+   "session": 0,
+   "session_seconds": 355.7326910495758,
+   "sha256": "92d13c32bd4618112ebc9a62526a8b83470b9f8bcab50be40307769481f6494a",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PRECORDING"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 11720,
+   "n_windows": 279,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "31c64a8ad7434ff31f317e094f23a55302528c81ba70cf88320445aa19efb2a9",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_MIC__s0": {
+   "capture_t0": 1701100887.685036,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 17354,
+   "n_windows": 328,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_WAN_MIC",
+   "session": 0,
+   "session_seconds": 327.21547198295593,
+   "sha256": "c4c337626536faa9cd581d543a99f15a82b9ed2aabc3a56a052d2bf0e49a2ca3",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_WAN_MIC"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_PHOTO__s0": {
+   "capture_t0": 1701100306.784698,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 5769,
+   "n_windows": 161,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_WAN_PHOTO",
+   "session": 0,
+   "session_seconds": 160.4441590309143,
+   "sha256": "27633bc90081e5aff3cd9feb60da3836dabefea2289943b12f8b0913c12a08cf",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_WAN_PHOTO"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_RECORDING__s0": {
+   "capture_t0": 1701100494.93648,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_RECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 16442,
+   "n_windows": 367,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_WAN_RECORDING",
+   "session": 0,
+   "session_seconds": 366.20899987220764,
+   "sha256": "8b19c262454af908423d5beee09b6d4d1dff71991a52005574c7b4baa4b80747",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_WAN_RECORDING"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_WATCH__s0": {
+   "capture_t0": 1701099896.673056,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_WAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 15752,
+   "n_windows": 387,
+   "phase": "interaction",
+   "phase_detail": "M1T_Camera_WAN_WATCH",
+   "session": 0,
+   "session_seconds": 386.8896310329437,
+   "sha256": "5d0602fff18f15d11a55111b28bace455d8f3f2edaf67fbed8a13691455e63a9",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_WAN_WATCH"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s0": {
+   "capture_t0": 1698253017.64791,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 152,
+   "n_windows": 162,
+   "phase": "power",
+   "phase_detail": "M1T_Camera_Power",
+   "session": 0,
+   "session_seconds": 161.0737419128418,
+   "sha256": "afbe510da94329d9a0d87fb1ac55f89fed446d9d6145a448141ee7b57b10f1e4",
+   "source_captures": [
+    "profiling/Power/M1T_Camera_Power"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s1": {
+   "capture_t0": 1698253524.420443,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s1.parquet",
+   "kind": "benign",
+   "n_packets": 133,
+   "n_windows": 132,
+   "phase": "power",
+   "phase_detail": "M1T_Camera_Power",
+   "session": 1,
+   "session_seconds": 131.59878587722778,
+   "sha256": "6cf24f17a665023b569ded3f0a2e85a3171077cd4a400fef33b02ed842d86bd4",
+   "source_captures": [
+    "profiling/Power/M1T_Camera_Power"
+   ]
+  },
+  "benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s2": {
+   "capture_t0": 1698254082.113927,
+   "device_id": "M1T_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__M1T_Camera__profiling~Power~M1T_Camera_Power__s2.parquet",
+   "kind": "benign",
+   "n_packets": 128,
+   "n_windows": 92,
+   "phase": "power",
+   "phase_detail": "M1T_Camera_Power",
+   "session": 2,
+   "session_seconds": 91.60780119895935,
+   "sha256": "2e1e69ca42a5e035f2ae34af61e4fc8179c2e3f2293db242576f5a4221d22221",
+   "source_captures": [
+    "profiling/Power/M1T_Camera_Power"
+   ]
+  },
+  "benign__Multifunctional_Pager__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 3310,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "9b657d510b6e1c8627146ace1c273fda2e990a45477fe791e26cb7d483d8b157",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__Multifunctional_Pager__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 19038,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "13b8abe6b273e54145c6e35031bf18edded6b9d7afec1c5238300814e67fa022",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 2950,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "acf0917c2f737d533f5800e30d5665a4aae393135440be56107a252a9ba46362",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 2977,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "bda3cb44ca75b071fcd4951dbd204419f5571f691599a8c09838fb2844cef925",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 3774,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "9c12cbd1abfd4f6af9b374efc7858469af4c4544929f633e714da3cb66cb6066",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 3996,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "bfa48bd22d8e7615b42e54fca98bb026fcf16a2fe2d3bf6869bb00434d73cec8",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 3093,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "e5d95986da927f043b848f6f5ef4e718f42dd4a58f9938e87ceb308a9ec14014",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 3842,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "afa41a0fc9203a6e842c0ef6d2c4d940947aec1db741b8a1ca691e46cf58ef9c",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 4343,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "0f0302476f08e2730b42eec20d16e56d96bf56bf7a3c0241850ad55241bdeaf4",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 4078,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "8ecd507590912f4ba453eb22b9d1849c0c9f077983b0ffec873ed3b8226bdc34",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 8067,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "ffeda1270e9310506cec196f05890da8ac9e58c3d7c47c789eaa1f6106337f3f",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 15297,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "0260c486fdc365fbfe7dbadf458f46f78bbdf7af10d93fd31add9b941f88a484",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 16037,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "b889cf57308e7db6782fcffc6d52307328d86b20500c08591fd3ecb5cfbee661",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 10,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "e3a97c4ae627743f015bc8c50f35943c0f32485b30654b14f264ddf2e3b4c621",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_APP__s0": {
+   "capture_t0": 1701178875.649799,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_APP__s0.parquet",
+   "kind": "benign",
+   "n_packets": 434,
+   "n_windows": 509,
+   "phase": "interaction",
+   "phase_detail": "Multifunctional_Pager_LAN_APP",
+   "session": 0,
+   "session_seconds": 508.5439758300781,
+   "sha256": "92eb33725bebe98a9c23590c4ebada19a502157d1cec0d52113c147c0ff36a9a",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_APP"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_PHYSICAL__s0": {
+   "capture_t0": 1701179414.818274,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 202,
+   "n_windows": 611,
+   "phase": "interaction",
+   "phase_detail": "Multifunctional_Pager_LAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 610.0254249572754,
+   "sha256": "823ddca135c1d8cec3dc0fcb60f3665ab46fa6da48dafa1863dc92ab8cf1e2b7",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_PHYSICAL"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_WAN_APP__s0": {
+   "capture_t0": 1701178280.712882,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_WAN_APP__s0.parquet",
+   "kind": "benign",
+   "n_packets": 202,
+   "n_windows": 288,
+   "phase": "interaction",
+   "phase_detail": "Multifunctional_Pager_WAN_APP",
+   "session": 0,
+   "session_seconds": 287.5719678401947,
+   "sha256": "7fe432f6b51df244f2b7f6a3304d4813ceb04da5bde630dd0e2a042f3009fd07",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_APP"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_WAN_PHYSICAL__s0": {
+   "capture_t0": 1701177847.660363,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_WAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 91,
+   "n_windows": 396,
+   "phase": "interaction",
+   "phase_detail": "Multifunctional_Pager_WAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 395.35636806488037,
+   "sha256": "c1acf2fe317848c2de0983808de272b450ac4d04e9af91f0e47c1dd3f24615bb",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_WAN_PHYSICAL"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s0": {
+   "capture_t0": 1698158876.433332,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 228,
+   "n_windows": 341,
+   "phase": "power",
+   "phase_detail": "Multifunctional_Pager_Power",
+   "session": 0,
+   "session_seconds": 340.6351809501648,
+   "sha256": "d2d9acef1a93dbae2838bb46315e5c76aa94a1e240ad7f651b5e96f879b093d8",
+   "source_captures": [
+    "profiling/Power/Multifunctional_Pager_Power"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s1": {
+   "capture_t0": 1698159584.218857,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s1.parquet",
+   "kind": "benign",
+   "n_packets": 258,
+   "n_windows": 488,
+   "phase": "power",
+   "phase_detail": "Multifunctional_Pager_Power",
+   "session": 1,
+   "session_seconds": 487.55782294273376,
+   "sha256": "2537a5bb4d1472798e4ddff16c54a6591708b1c8fbf31b1a2803a3dc058b0057",
+   "source_captures": [
+    "profiling/Power/Multifunctional_Pager_Power"
+   ]
+  },
+  "benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s2": {
+   "capture_t0": 1698160607.223667,
+   "device_id": "Multifunctional_Pager",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Multifunctional_Pager__profiling~Power~Multifunctional_Pager_Power__s2.parquet",
+   "kind": "benign",
+   "n_packets": 234,
+   "n_windows": 400,
+   "phase": "power",
+   "phase_detail": "Multifunctional_Pager_Power",
+   "session": 2,
+   "session_seconds": 399.542503118515,
+   "sha256": "5a9a06cebf42b03ae49c6fc756f6258f7652e807799349df339222587c4f6563",
+   "source_captures": [
+    "profiling/Power/Multifunctional_Pager_Power"
+   ]
+  },
+  "benign__Owltron_Camera__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 4203,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "6eaf318d0f3cbfc1ae7dc5cc354207be9b6e17674c6db07ac33658d443a3c8bc",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__Owltron_Camera__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 27896,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "8d928fb595a0e4620bc70b553c661278f3549c9c0f98a3b2a90447fa82ef3d2b",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 5146,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "152a7385fc71c8099ad0d5b76d76ed11dcfa48f592f6a0a944a7ac626d2f085c",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 4198,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "3e260b89d587d78e0da7ed73ed3b87f90e307f824e6eac377b21fe7124ab87fe",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 5579,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "e6900f6d9ac00998ba6fadb02d887bddfc49c582926edd01809270053e10abac",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 4901,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "5f4cd461c34765e155c5c7d2ec0f3c4d277f3c0911b12b723e9bd5883c151d96",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 4451,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "8b56b935cff7d1b56beffd5d378edd4ca57ad7b290515123f5fbe15bdddf170a",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 5358,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "6ed15c4cb645437e1d9bb29a3de4c9ece7539bad7f42c5c65a659daa369aa5ed",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 5896,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "7fb576b9c684390bf94a50f8c3bc6cab46c16ecf9a85db37a670f0d4a4688309",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 6574,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "c3f45b94b43c22ac471764564c75b6fefa4b0209d85dd77a12e95f1f2b50c495",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 9700,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "a58885811dff21354c56acb3dbb598c8cfe3d9f1b40ede0851ab384fdc6f3cae",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 19269,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "2345bcba11189aa63afb3c24744d9c242d4abf5d98815618ea0abb9ddd0c26c7",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 19320,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "ab0d545fc47034f6f84b3d27545aadf24fe98b5a28eb8f9bb8fc591110a561e4",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 20,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "32ad0069c3632e909d5b8d4ce023542de2e118de752e6b79169bad4ae2297a6f",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701102180.370342,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 38911,
+   "n_windows": 313,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 312.82992696762085,
+   "sha256": "3f7b4e30efb43575554a27a7110a7e19484dd948c9e7ea4cc235457fbfc9f4f8",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_MIC"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_PHOTO__s0": {
+   "capture_t0": 1701101670.416118,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 8810,
+   "n_windows": 145,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_LAN_PHOTO",
+   "session": 0,
+   "session_seconds": 144.10963606834412,
+   "sha256": "46407bb5e514c3c26bb66efcb59cbb4161f9cc522bb9f30f1457f44e7eaa8021",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_PHOTO"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_RECORDING__s0": {
+   "capture_t0": 1701101839.478613,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_RECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 36662,
+   "n_windows": 320,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_LAN_RECORDING",
+   "session": 0,
+   "session_seconds": 319.15631198883057,
+   "sha256": "e58093d1c4ee5d06ad0e4622428207e833fb229dfa6d0774ab63d03b33a55561",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_RECORDING"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701101343.533417,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 30605,
+   "n_windows": 312,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 311.80351996421814,
+   "sha256": "7749213867b075b60a08d82e63a47b875869c6a0a5d580ad61e000be654e3df0",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_MIC__s0": {
+   "capture_t0": 1701102518.727024,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 37326,
+   "n_windows": 285,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_WAN_MIC",
+   "session": 0,
+   "session_seconds": 284.6806478500366,
+   "sha256": "a70945c26a410aa6359eaf4b3b28cedf4e7c765f4c4c73ba013226ea7e4970a9",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_MIC"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_PHOTO__s0": {
+   "capture_t0": 1701103259.924824,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 5695,
+   "n_windows": 123,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_WAN_PHOTO",
+   "session": 0,
+   "session_seconds": 122.60379099845886,
+   "sha256": "f00ba8960a2f70aa81c83e0492f2f8b930b0e8bf7d7f2f0b9d7156b556e79674",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_PHOTO"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_RECORDING__s0": {
+   "capture_t0": 1701103604.931815,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_RECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 27767,
+   "n_windows": 244,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_WAN_RECORDING",
+   "session": 0,
+   "session_seconds": 243.20626997947693,
+   "sha256": "cd3fc6173a01c8b33a5e0b8c38a28547bf5d198e673306b4d3a6249edd99cef1",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_RECORDING"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_RECORDING__s1": {
+   "capture_t0": 1701104167.164991,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_RECORDING__s1.parquet",
+   "kind": "benign",
+   "n_packets": 12353,
+   "n_windows": 72,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_WAN_RECORDING",
+   "session": 1,
+   "session_seconds": 71.98271608352661,
+   "sha256": "dcc079f3c858acec4363dd8563928dcd3ef74593386c3c26c8aa06531e4c52a5",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_RECORDING"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_WATCH__s0": {
+   "capture_t0": 1701102944.257211,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 35040,
+   "n_windows": 292,
+   "phase": "interaction",
+   "phase_detail": "Owltron_Camera_WAN_WATCH",
+   "session": 0,
+   "session_seconds": 291.52168107032776,
+   "sha256": "73fac15b218da7cac276f3f5a163596658a9c8047c85ba8bf0d7d07e57e5c1b1",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_WATCH"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Power~Owltron_Camera_Power__s0": {
+   "capture_t0": 1698326115.015475,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Power~Owltron_Camera_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 395,
+   "n_windows": 380,
+   "phase": "power",
+   "phase_detail": "Owltron_Camera_Power",
+   "session": 0,
+   "session_seconds": 379.8519699573517,
+   "sha256": "0ae8231ff9618db2f861aa89a567fab15add6c444d6333d8c93896a13a41a6fb",
+   "source_captures": [
+    "profiling/Power/Owltron_Camera_Power"
+   ]
+  },
+  "benign__Owltron_Camera__profiling~Power~Owltron_Camera_Power__s1": {
+   "capture_t0": 1698326982.149936,
+   "device_id": "Owltron_Camera",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Owltron_Camera__profiling~Power~Owltron_Camera_Power__s1.parquet",
+   "kind": "benign",
+   "n_packets": 812,
+   "n_windows": 827,
+   "phase": "power",
+   "phase_detail": "Owltron_Camera_Power",
+   "session": 1,
+   "session_seconds": 826.2438509464264,
+   "sha256": "263d7b260adacab97e161c3489843533c4c9837d0ba9c5651be7c48709267a04",
+   "source_captures": [
+    "profiling/Power/Owltron_Camera_Power"
+   ]
+  },
+  "benign__SenseU__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 109,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "0328c3005789d1f3cc827aed35cd6d725935190e759551dccc3c76a281c9fcb8",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__SenseU__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 7961,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "38fd2c4049de17d394042090474b2c9206ba0c5295f6847e3dc939d8ca2fd6f3",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 4179,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "44fb58dcf4f83ef5d290dbece0eebe35459bf965a6863bc8ec8c0fa19a95d394",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 2367,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "04c5c14edc44396b551b9072401e7e17b6dff3ad7773c7f35f44d4b921c072ea",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 4894,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "1e7032a2287385948efd10b12655e15e6d413e4798fc69de374212fd6ecf6493",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 3633,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "a0c15e5a92259a54c37c9c8358ade6b2b3bc1058122141dbb572879edaf93437",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 4570,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "a61847f0e519c33a198e42eda9e203d242f996ee737f9f364d37abfa9f1d3f12",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 5149,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "407adfec97585fcd2f7f2a13049bad86bd6e3491d8d9fbd0913a109d6599a922",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 6615,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "e7feb79bed5b009892826e948499a3bd971e5f595b2bfeb1d990df3f0197d103",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 6225,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "c92bc8595f2af97a65a67bddae529404e710348f8dc36dc00f1967b8c5655ba3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 6773,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "0b0894975ed407803e1424edbb4ba9d76f48056173aca24d604a8d6263ff24ed",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__SenseU__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 14304,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "69b9a61a63c48e18fbe8cb391ddc94ce28c6d37007b26ddfebd5f61cda5d1ac5",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__SenseU__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 14590,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "eeda852496d0a0798e03138a098c6afbf9b76fec7c293b2f4b9881f25063e3a5",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__SenseU__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 11,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "9de77021bb70444f5bd64612e6a019a97a936aa6e2b9a9325718a65096ffa7de",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__SenseU__profiling~Interactions~SenseU~SenseU_LAN_EMERGENCY__s0": {
+   "capture_t0": 1701182299.956235,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Interactions~SenseU~SenseU_LAN_EMERGENCY__s0.parquet",
+   "kind": "benign",
+   "n_packets": 216,
+   "n_windows": 538,
+   "phase": "interaction",
+   "phase_detail": "SenseU_LAN_EMERGENCY",
+   "session": 0,
+   "session_seconds": 537.8709511756897,
+   "sha256": "1e4a58d35505a0496bf824a30588e632e44d6871d356ec29fc3b8fb9ec2ddf40",
+   "source_captures": [
+    "profiling/Interactions/SenseU/SenseU_LAN_EMERGENCY"
+   ]
+  },
+  "benign__SenseU__profiling~Interactions~SenseU~SenseU_WAN_EMERGENCY__s0": {
+   "capture_t0": 1701183051.629512,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Interactions~SenseU~SenseU_WAN_EMERGENCY__s0.parquet",
+   "kind": "benign",
+   "n_packets": 109,
+   "n_windows": 333,
+   "phase": "interaction",
+   "phase_detail": "SenseU_WAN_EMERGENCY",
+   "session": 0,
+   "session_seconds": 332.615003824234,
+   "sha256": "647bfe8b88bbf2cfbea01eaccb28abce70ff932c9ea3c63e6e88311ffd222a98",
+   "source_captures": [
+    "profiling/Interactions/SenseU/SenseU_WAN_EMERGENCY"
+   ]
+  },
+  "benign__SenseU__profiling~Interactions~SenseU~SenseU_WAN_EMERGENCY__s1": {
+   "capture_t0": 1701183762.943337,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Interactions~SenseU~SenseU_WAN_EMERGENCY__s1.parquet",
+   "kind": "benign",
+   "n_packets": 48,
+   "n_windows": 46,
+   "phase": "interaction",
+   "phase_detail": "SenseU_WAN_EMERGENCY",
+   "session": 1,
+   "session_seconds": 45.902586936950684,
+   "sha256": "56becad14937a4ae79e123d1c77c1199275c32fde3c87142084d637ba2df6dbe",
+   "source_captures": [
+    "profiling/Interactions/SenseU/SenseU_WAN_EMERGENCY"
+   ]
+  },
+  "benign__SenseU__profiling~Power~SenseUBaby_Power__s0": {
+   "capture_t0": 1698329529.796184,
+   "device_id": "SenseU",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__SenseU__profiling~Power~SenseUBaby_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 352,
+   "n_windows": 1369,
+   "phase": "background_power",
+   "phase_detail": "SenseUBaby_Power",
+   "session": 0,
+   "session_seconds": 1368.1106598377228,
+   "sha256": "24a0b1a26a82994609567099dc13fcd5cabe0c8919bad51e0c5911169ce444f3",
+   "source_captures": [
+    "profiling/Power/SenseUBaby_Power"
+   ]
+  },
+  "benign__Singcall__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 429,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "d6578783734ba69521674abced03d4f4150b147a2a8abcf19846b3575b4d060e",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 260,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "aced7a6188b748b49bf26e748263fa806894282eb16cd0e89229fb63fa8e3032",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 162,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "95d1ea2cfe16a32546ec826c0dd08be98e289f7fbcf94bfe1f746941a65d93ba",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 130,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "b8792ed397b09ea2893d649d6a5d4ebdaaa0b5d27b9aedd8645d03dab1d72628",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 136,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "e4e048a64895ccc376d7b5e654dd2ec8de70d528711db4d4361926697165facf",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 133,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "142c3bfb26f59609688bcb5c6fd655c08d829b8fcabcf8908b7880db3bcd86fe",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 697,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "439de4a38d6022c15ee0e7ce51ed0a5185793a52820ab10fd970f71adc34555a",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 535,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "d9a90607ac0c253159308d43fd4ef5ebdf98f0172214702e125e06dc8bb6e7b3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__Singcall__profiling~Interactions~Singcall~Singcall_LAN_PHYSICAL__s0": {
+   "capture_t0": 1701177126.008265,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Interactions~Singcall~Singcall_LAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 419,
+   "n_windows": 259,
+   "phase": "interaction",
+   "phase_detail": "Singcall_LAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 258.992290019989,
+   "sha256": "2ccf2eaf5275e4e8e8fa5b99a415837e13d429aa263e52dea4952c1b5e1e2fa6",
+   "source_captures": [
+    "profiling/Interactions/Singcall/Singcall_LAN_PHYSICAL"
+   ]
+  },
+  "benign__Singcall__profiling~Interactions~Singcall~Singcall_WAN_PHYSICAL__s0": {
+   "capture_t0": 1701177462.732679,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Interactions~Singcall~Singcall_WAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 334,
+   "n_windows": 235,
+   "phase": "interaction",
+   "phase_detail": "Singcall_WAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 234.947026014328,
+   "sha256": "fa0f7e9f32fbb584cfebd0308d8bd46151b39ad21f0edcf40715ea9b5b68d857",
+   "source_captures": [
+    "profiling/Interactions/Singcall/Singcall_WAN_PHYSICAL"
+   ]
+  },
+  "benign__Singcall__profiling~Power~Singcall_Power__s0": {
+   "capture_t0": 1698156837.806389,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Power~Singcall_Power__s0.parquet",
+   "kind": "benign",
+   "n_packets": 193,
+   "n_windows": 204,
+   "phase": "power",
+   "phase_detail": "Singcall_Power",
+   "session": 0,
+   "session_seconds": 203.2837429046631,
+   "sha256": "ba3f63c15f5c8d338d0dc8765ff1fc8a667c68f389904ffc64b6d216d0c74f09",
+   "source_captures": [
+    "profiling/Power/Singcall_Power"
+   ]
+  },
+  "benign__Singcall__profiling~Power~Singcall_Power__s1": {
+   "capture_t0": 1698157623.699875,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Power~Singcall_Power__s1.parquet",
+   "kind": "benign",
+   "n_packets": 225,
+   "n_windows": 178,
+   "phase": "power",
+   "phase_detail": "Singcall_Power",
+   "session": 1,
+   "session_seconds": 177.6615879535675,
+   "sha256": "8c0cc63af4257691a33e790afa90c6e69353a0dd10aeb9bb1b4630025ce64417",
+   "source_captures": [
+    "profiling/Power/Singcall_Power"
+   ]
+  },
+  "benign__Singcall__profiling~Power~Singcall_Power__s2": {
+   "capture_t0": 1698158238.636127,
+   "device_id": "Singcall",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__Singcall__profiling~Power~Singcall_Power__s2.parquet",
+   "kind": "benign",
+   "n_packets": 88,
+   "n_windows": 186,
+   "phase": "power",
+   "phase_detail": "Singcall_Power",
+   "session": 2,
+   "session_seconds": 185.2324469089508,
+   "sha256": "30368dcf22329e10faf14040fd8d405f09fae2db462094e86737e9d9c9c55040",
+   "source_captures": [
+    "profiling/Power/Singcall_Power"
+   ]
+  },
+  "benign__broker__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 33803,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "6489b8995331440bc4e28f50960fb7ddf3fccfc84301842594198a51f08377b9",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__broker__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 90799,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "d3b61d870ea10b75f1b81ef1bf48f32248ac9d50049e04a2a871d0a27b61f87c",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 27056,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "98072e54413d3300bc73dbfec61da7e58e48cdbf987f63da82f3c50c2f56f749",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 7093,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "fad74668d3e4cc1bee3f14acaf982d8fd5666b719c34599257fed2be008a14b8",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 1229,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "f7310b7ed8db672a5ec869d320b51a7c4045e6f4d0e1eee1a206561b6c16f7a2",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 45983,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "b2ebce43aae852db62d0fa019c539930019542c49b2320c117c886a206d465dd",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 18706,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "3b600ec0bd2a5c411eaad76b7957df0a308a5e2113b01794eed449a27c36221a",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 992,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "aa7f44548f5804112f33989e6fa541e7f18476d0df7669ad0b03f372741ed910",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 51438,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "37804b9e59469c1627ed406e54ef33bbed2be6a181ed85cbf9d2cebc4c1e7c59",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 48417,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "d2445925ddbd72bbae913faabf4c6b31ea98dbc191694cba241fc4b18834232b",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 14703,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "6db87f20802afe37f7f03f92a6ad7fe8c611b576167d889dff1076e86705d9a3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__broker__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 29335,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "39ee0316256fa07bc20e8d6334a4adde9507cdbf47bd101ff8c966ac2bc8bae9",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__broker__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 29331,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "712dc07de378da6f1cc95d9ba2037fb1194551a08a8a37d9450ca87d011c6f9c",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__broker__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "broker",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__broker__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 24,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "8b3ef1bd94138ab2affb9428d2c3007aebab746de82c593efb658ee32325a889",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_185__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 1422,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "4e0dbbcb7414ae401dca380e8d115952607e3fd7f01114d30cb5c718845046af",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__dev_192_168_137_185__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 7957,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "4165779aeeaa4010d9992082c2723ba32abc5a1c317640b7941f0710bc5d8d29",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 759,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "7adfa1dbbb3765bf7612f00bbb8a05cee7f800e32165e15ec31ced946a51e178",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 875,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "01e2805a1fc0d64378eee9f5a3d709271addaa23a290070c9d1b919c08dabe06",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 1156,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "8cb2506625e11120c64b87eab22063a7996187b9f21ba51eb4000c98173cb84f",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 1125,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "517e760981488bcdcacc23b73d034ef6df03a21ceb24cc1076e2a05717fa4927",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 890,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "d14f5d58836f1e0a98ca6aaf2a038e7fedd3460267d797e5223b1519bf6a8de4",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 1173,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "0294b863735a30b74e3a716b1259ab4a4d96ac0469feff1ad8a01c28f916e705",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 1286,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "00e77198b3e3b1e5de3c25dd823b1d87a4aea7dcff298fa6cb22c1560c59c41f",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 1164,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "68b5c3fb6d63d7a465a83ca663d03c65ecbb54ee8d9712db863b3006566eb9b2",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 2025,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "6afe5c43ff6de37b9b01dc81c34ef6809cf3c4d84b19c7ba655eab4ffb5af2a8",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 4725,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "07d613ddeab524ba2c49314de474ed3f6ecc5d73f48f62c55885abba3eb9e845",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 4725,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "6c8ae0c7298215176f07a4a4272e0c010c2d1c20a8559e0a2d4ea22bf051394b",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__dev_192_168_137_185__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "dev_192_168_137_185",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_185__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 10,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "e44767eedc60ab967054bc26021c9cfdaa2024f209f04df67b5fb1a64fe2c5b1",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_210__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "dev_192_168_137_210",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_210__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 12398,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "353a8580cc874a78e80757f90d8e425ce5f3c229d63ff6ac136079157dce9c95",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__dev_192_168_137_210__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "dev_192_168_137_210",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_210__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 51975,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "39e0256d930da18a12a28a22cc57f647f2d157b8ef0573bc1832e77b652c7531",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__dev_192_168_137_243__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 38136,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "d956f02a2346ab5f433ff500def47010f62c7bbe5a0bfd74215b343f79e399f3",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__dev_192_168_137_243__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 48959,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "bd9abd5ce297af2816b59e43d61938dd36776e53f493c15efbdda68061cd7404",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 17269,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "6513801a362cbd2a52721d194e9481f07af1d5d7c323aaa56daf98cbcc2d2c74",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 34737,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "b3a3409fdb63adf2088fa0539d0838f21b3a026b19546999699d01ad023beaea",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 4907,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "f1828380af3e702526252c4e8871f10cd505c296e68c5bbfa7047c73216e71e5",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 44810,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "f5fe28c2d80792465d11131fc040880b85840058680949e85eea756f9b5bc87b",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 32373,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "a20ef944e309edfc9871b652972cb69c76c50ac94889c2b183e1d61b6cb101d1",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 23,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "3d5dddb0a77ab32f3ab4add52f68bb386bdffd50c5597303ee0bfce6bbc584b3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 80356,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "b0ae39faac7882f71e1bba31943d6a9540ae426f912ddedd0731591abdc44423",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 46113,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "f22951072e3384257417faa2e20f2c1db3dcd698c99f0f5b46856fc90b1ea322",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 255273,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "3fdc039b71955b08dbcd7c22aca2d3f2ee78919e56f308cb187a7a8035799b07",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 3974,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "2ecace76b8989e3ebdaac74c5cfad1f2540856b3de4021714108dc481b0721dc",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 3959,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "17c6b2ae6faa6d93646dff436230be175ac391c12f8d6694ac815e2184f755bf",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701176125.716126,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 37404,
+   "n_windows": 349,
+   "phase": "background_interaction",
+   "phase_detail": "Ecobee_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 348.44771003723145,
+   "sha256": "cc8e541fdac35e77badc8d4d9104754aa298c63a4deb1678fe7180a3d59e2140",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_MIC"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701094819.549751,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 21186,
+   "n_windows": 388,
+   "phase": "background_interaction",
+   "phase_detail": "Ecobee_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 387.7277069091797,
+   "sha256": "b5d427d5e7a48607d247c57292e04682df7ea76ded82557b2ffa4ede5e189658",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s1": {
+   "capture_t0": 1701095813.962749,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Ecobee_Camera~Ecobee_Camera_LAN_WATCH__s1.parquet",
+   "kind": "benign",
+   "n_packets": 13651,
+   "n_windows": 121,
+   "phase": "background_interaction",
+   "phase_detail": "Ecobee_Camera_LAN_WATCH",
+   "session": 1,
+   "session_seconds": 120.69712400436401,
+   "sha256": "d726fdea56bfdbc435b329f4537ce3d7c5dd05397aeea7b7fe1d9ff09846f93a",
+   "source_captures": [
+    "profiling/Interactions/Ecobee_Camera/Ecobee_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701099387.003639,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 15844,
+   "n_windows": 474,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 473.64202308654785,
+   "sha256": "e68a21d82f0d2abb54268a200f74817d786983a1546f228dddfaf6254610cd1c",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_MIC"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0": {
+   "capture_t0": 1701098711.521506,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 1419,
+   "n_windows": 267,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_PHOTO",
+   "session": 0,
+   "session_seconds": 266.46105003356934,
+   "sha256": "118a5ee1a8d4aae611c3ab7b0b161a5cd9c5c2cd3ecfe84b2cdae5ee48037fe1",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PHOTO"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0": {
+   "capture_t0": 1701099001.653523,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_PRECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 8373,
+   "n_windows": 356,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_PRECORDING",
+   "session": 0,
+   "session_seconds": 355.7326910495758,
+   "sha256": "641544e572354ca33639bdcb0b6d551530e5f8f54aa48f595ac9523f33a1c482",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_PRECORDING"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701104510.235652,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~M1T_Camera~M1T_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 11234,
+   "n_windows": 279,
+   "phase": "background_interaction",
+   "phase_detail": "M1T_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 278.2575659751892,
+   "sha256": "d72aa6e128cf4c2628386cfcfc914a2f3a4fc6b67a6625beadd40aeed279934d",
+   "source_captures": [
+    "profiling/Interactions/M1T_Camera/M1T_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_APP__s0": {
+   "capture_t0": 1701178875.649799,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_APP__s0.parquet",
+   "kind": "benign",
+   "n_packets": 233,
+   "n_windows": 509,
+   "phase": "background_interaction",
+   "phase_detail": "Multifunctional_Pager_LAN_APP",
+   "session": 0,
+   "session_seconds": 508.5439758300781,
+   "sha256": "bf878c3b135f8aa5e25327d103c0c4d885d7c3c30899b3b50742cf5725508ea2",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_APP"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_PHYSICAL__s0": {
+   "capture_t0": 1701179414.818274,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Multifunctional_Pager~Multifunctional_Pager_LAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 125,
+   "n_windows": 611,
+   "phase": "background_interaction",
+   "phase_detail": "Multifunctional_Pager_LAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 610.0254249572754,
+   "sha256": "9605c703a07b985eb5167f46509677d1709b0b355935e827c8fd5fd436747060",
+   "source_captures": [
+    "profiling/Interactions/Multifunctional_Pager/Multifunctional_Pager_LAN_PHYSICAL"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_MIC__s0": {
+   "capture_t0": 1701102180.370342,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 37634,
+   "n_windows": 313,
+   "phase": "background_interaction",
+   "phase_detail": "Owltron_Camera_LAN_MIC",
+   "session": 0,
+   "session_seconds": 312.82992696762085,
+   "sha256": "b90a1625b543ad334a496362db0111ad4c19ca64863d7dada3f271ef4973df4f",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_MIC"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_PHOTO__s0": {
+   "capture_t0": 1701101670.416118,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_PHOTO__s0.parquet",
+   "kind": "benign",
+   "n_packets": 8096,
+   "n_windows": 145,
+   "phase": "background_interaction",
+   "phase_detail": "Owltron_Camera_LAN_PHOTO",
+   "session": 0,
+   "session_seconds": 144.10963606834412,
+   "sha256": "8552caf36469a5279a5b74f7a17e951db53687d87b27ed6092027784654387ea",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_PHOTO"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_RECORDING__s0": {
+   "capture_t0": 1701101839.478613,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_RECORDING__s0.parquet",
+   "kind": "benign",
+   "n_packets": 35379,
+   "n_windows": 320,
+   "phase": "background_interaction",
+   "phase_detail": "Owltron_Camera_LAN_RECORDING",
+   "session": 0,
+   "session_seconds": 319.15631198883057,
+   "sha256": "e24c3684c75f5daa9dcdecdcd1dc65dddda347b56561e05c7e91fbf4cd928f98",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_RECORDING"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_WATCH__s0": {
+   "capture_t0": 1701101343.533417,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_LAN_WATCH__s0.parquet",
+   "kind": "benign",
+   "n_packets": 28566,
+   "n_windows": 312,
+   "phase": "background_interaction",
+   "phase_detail": "Owltron_Camera_LAN_WATCH",
+   "session": 0,
+   "session_seconds": 311.80351996421814,
+   "sha256": "42cc4a46b58b1430870c84c565472e36bce4e87e9dc40874610c523abc1c0b7d",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_LAN_WATCH"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_MIC__s0": {
+   "capture_t0": 1701102518.727024,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Owltron_Camera~Owltron_Camera_WAN_MIC__s0.parquet",
+   "kind": "benign",
+   "n_packets": 60,
+   "n_windows": 285,
+   "phase": "background_interaction",
+   "phase_detail": "Owltron_Camera_WAN_MIC",
+   "session": 0,
+   "session_seconds": 284.6806478500366,
+   "sha256": "5436f71a006fe03d2607a95e35c368914fef82222df5f454a4fd5ceb7eca701b",
+   "source_captures": [
+    "profiling/Interactions/Owltron_Camera/Owltron_Camera_WAN_MIC"
+   ]
+  },
+  "benign__dev_192_168_137_243__profiling~Interactions~Singcall~Singcall_LAN_PHYSICAL__s0": {
+   "capture_t0": 1701177126.008265,
+   "device_id": "dev_192_168_137_243",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_243__profiling~Interactions~Singcall~Singcall_LAN_PHYSICAL__s0.parquet",
+   "kind": "benign",
+   "n_packets": 65,
+   "n_windows": 259,
+   "phase": "background_interaction",
+   "phase_detail": "Singcall_LAN_PHYSICAL",
+   "session": 0,
+   "session_seconds": 258.992290019989,
+   "sha256": "5e5fe30c67de6b43bec2a5a8c8c768a133e88b4d991efc3541c278b9e75a06c2",
+   "source_captures": [
+    "profiling/Interactions/Singcall/Singcall_LAN_PHYSICAL"
+   ]
+  },
+  "benign__dev_192_168_137_59__attacks~test~Benign_test__s0": {
+   "capture_t0": 1694694254.461693,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__attacks~test~Benign_test__s0.parquet",
+   "kind": "benign",
+   "n_packets": 1410,
+   "n_windows": 14206,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 14205.791604995728,
+   "sha256": "ad15526e0b2bd2505ed5b9bd0a7fa9c50e52efda7a2fa8433c86f3c29b4f82d4",
+   "source_captures": [
+    "attacks/test/Benign_test"
+   ]
+  },
+  "benign__dev_192_168_137_59__attacks~train~Benign_train__s0": {
+   "capture_t0": 1694614860.354327,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__attacks~train~Benign_train__s0.parquet",
+   "kind": "benign",
+   "n_packets": 7879,
+   "n_windows": 79395,
+   "phase": "unlabelled",
+   "phase_detail": "Benign",
+   "session": 0,
+   "session_seconds": 79394.10720801353,
+   "sha256": "20567f8fe3c328fe35a79a3580f6df52700f1d6c134574f0cf793680ce2ff084",
+   "source_captures": [
+    "attacks/train/Benign_train"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s0": {
+   "capture_t0": 1699286928.099553,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s0.parquet",
+   "kind": "benign",
+   "n_packets": 744,
+   "n_windows": 7502,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 0,
+   "session_seconds": 7501.405444860458,
+   "sha256": "57b911e85d69d7c165e25cab128ce8d39564f0f10f01a1e6f5f98652b4472a9d",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s1": {
+   "capture_t0": 1699365374.582449,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s1.parquet",
+   "kind": "benign",
+   "n_packets": 862,
+   "n_windows": 8687,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 1,
+   "session_seconds": 8686.331881046295,
+   "sha256": "8d493973e4ceb3f58adaf3aba16b68c8922047c38abcd34062e3af9a4b88ac7e",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s2": {
+   "capture_t0": 1699451543.230461,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s2.parquet",
+   "kind": "benign",
+   "n_packets": 1134,
+   "n_windows": 11437,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 2,
+   "session_seconds": 11436.089188098907,
+   "sha256": "df6a0e99b30db53dd5477cb9fdc4f61323f2985e78771b3deb2105ef7692e10a",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s3": {
+   "capture_t0": 1699541932.065352,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s3.parquet",
+   "kind": "benign",
+   "n_packets": 1107,
+   "n_windows": 11155,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 3,
+   "session_seconds": 11154.196349143982,
+   "sha256": "d9a27b8badc3be2d084611eb8389bdc037f85ce5da0948e7bb138c7ea231ba49",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s4": {
+   "capture_t0": 1700062828.815043,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s4.parquet",
+   "kind": "benign",
+   "n_packets": 878,
+   "n_windows": 8849,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 4,
+   "session_seconds": 8848.880980968475,
+   "sha256": "6350403e5f5fb35d5e95e206ac04c9a1a3d2410cb401e834011f087571307950",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s5": {
+   "capture_t0": 1700142175.112737,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s5.parquet",
+   "kind": "benign",
+   "n_packets": 1155,
+   "n_windows": 11643,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 5,
+   "session_seconds": 11642.538794994354,
+   "sha256": "a276d1265af034256bbb63475e32eb841941147cff642efa9281829ccd0cebca",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s6": {
+   "capture_t0": 1700667634.26524,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s6.parquet",
+   "kind": "benign",
+   "n_packets": 1268,
+   "n_windows": 12785,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 6,
+   "session_seconds": 12784.556478023529,
+   "sha256": "04c232624791a71f1267665d0e58229e21383a2d7facd64328f7d039a979efe3",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s7": {
+   "capture_t0": 1700752751.473103,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s7.parquet",
+   "kind": "benign",
+   "n_packets": 1147,
+   "n_windows": 11560,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 7,
+   "session_seconds": 11559.242553949356,
+   "sha256": "5d032ca52ea212793d9fd82247d5fefc089dfc1974bf93c782316e32439988f5",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Active~Active__s8": {
+   "capture_t0": 1700834101.103197,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Active~Active__s8.parquet",
+   "kind": "benign",
+   "n_packets": 1989,
+   "n_windows": 20054,
+   "phase": "active",
+   "phase_detail": "Active",
+   "session": 8,
+   "session_seconds": 20053.885281801224,
+   "sha256": "bf2c2f58011461b89eb03d4d5eaa5eef89d6087f99dc94000778e596d23f3554",
+   "source_captures": [
+    "profiling/Active/Active"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Idle~Idle__s0": {
+   "capture_t0": 1698872400.205632,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Idle~Idle__s0.parquet",
+   "kind": "benign",
+   "n_packets": 4643,
+   "n_windows": 46801,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 0,
+   "session_seconds": 46800.14716005325,
+   "sha256": "3270fe91285d9c4ab8ef9ca6570246d50d8e3d10a4ec6d5af6e5c6e09cdb3c8a",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "benign__dev_192_168_137_59__profiling~Idle~Idle__s1": {
+   "capture_t0": 1698958802.534706,
+   "device_id": "dev_192_168_137_59",
+   "extraction": "device_packets_of_one_session",
+   "file": "streams/benign__dev_192_168_137_59__profiling~Idle~Idle__s1.parquet",
+   "kind": "benign",
+   "n_packets": 4647,
+   "n_windows": 46798,
+   "phase": "idle",
+   "phase_detail": "Idle",
+   "session": 1,
+   "session_seconds": 46797.22993898392,
+   "sha256": "d6afb59651deaf8882510b1facb8a6da552f964073be40f280175ab29fac3c54",
+   "source_captures": [
+    "profiling/Idle/Idle"
+   ]
+  },
+  "onset__M1T_Camera__attacks~train~Benign_train__attacks~train~ARP_Spoofing_train": {
+   "attack_id": "arp_spoofing__ARP_Spoofing_train__M1T_Camera",
+   "attack_seconds": 6190.541867017746,
+   "benign_seconds": 3601.0,
+   "device_id": "M1T_Camera",
+   "extraction": "merged_packets",
+   "family": "arp_spoofing",
+   "file": "streams/onset__M1T_Camera__attacks~train~Benign_train__attacks~train~ARP_Spoofing_train.parquet",
+   "first_attacker_packet_after_onset_s": 6.401495933532715,
+   "kind": "onset",
+   "n_attacker_packets": 46,
+   "n_packets": 12732,
+   "n_packets_attack": 11276,
+   "n_packets_benign": 1456,
+   "n_windows": 9792,
+   "onset_t": 3601.0,
+   "sha256": "5d816eb4c85266fb95617efb8db5738bc064857896810c6e43e66521da234a3d",
+   "source_captures": [
+    "attacks/train/Benign_train",
+    "attacks/train/ARP_Spoofing_train"
+   ],
+   "time_shift_attack_s": 672975.2205569744
+  }
+ },
+ "window_seconds": 1.0
+}

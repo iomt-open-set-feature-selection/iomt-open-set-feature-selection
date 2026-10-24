@@ -9,31 +9,37 @@
 /src/iomt/stubs.py                  @rana-rishith @Adithyaa-06
 /.github/                           @rana-rishith @Adithyaa-06
 
-# Person A: streams, detection, RQ1, stats, replication
+# Ownership follows the 21 Oct 2026 team split (plan update, section 4).
+
+# Person A: streams, detectors, validity audit, closed-set baselines,
+# RQ4 delay scoring, phase-aware detector (RQ5), CPU latency, replication streams
 /src/iomt/streams/                  @rana-rishith
 /src/iomt/detectors/                @rana-rishith
 /src/iomt/validity/                 @rana-rishith
+/src/iomt/audit/                    @rana-rishith
+/src/iomt/ramps/                    @rana-rishith
+/src/iomt/closedset/                @rana-rishith
 /src/iomt/experiments/              @rana-rishith
-/src/iomt/analysis/stats.py         @rana-rishith
 /src/iomt/replication/              @rana-rishith
 /data/processed/streams_manifest.json @Adithyaa-06
 
-# Person B: audit, selection, closed-set, RQ2, RQ3
-/src/iomt/ramps/                    @Adithyaa-06
-/src/iomt/audit/                    @Adithyaa-06
+# Person B: selection and k sweep, KL and add-back (RQ2), selector comparison
+# (RQ3), RQ4 objective, phase labels and phase-hiding check (RQ5), statistics,
+# detection-before-harm case study
 /src/iomt/selection/                @Adithyaa-06
-/src/iomt/closedset/                @Adithyaa-06
 /src/iomt/info/                     @Adithyaa-06
-/src/iomt/analysis/rq3.py           @Adithyaa-06
+/src/iomt/analysis/                 @Adithyaa-06
 
 # Handoff artefacts: the receiver reviews
 /results/rankings/                  @rana-rishith
-/results/audit/                     @rana-rishith
+/results/audit/                     @Adithyaa-06
+/results/handoff/                   @Adithyaa-06
+/results/stage1/                    @Adithyaa-06
 
-# Gates: the closer reviews, not the owner
+# Gates: the closer reviews, not the owner (A owns 1-5, B closes; B owns 6, A closes)
 /tests/gates/test_gate_1_stream_count.py    @Adithyaa-06
 /tests/gates/test_gate_2_one_stream.py      @Adithyaa-06
-/tests/gates/test_gate_3_attack_classes.py  @rana-rishith
-/tests/gates/test_gate_4_block_size.py      @rana-rishith
+/tests/gates/test_gate_3_attack_classes.py  @Adithyaa-06
+/tests/gates/test_gate_4_block_size.py      @Adithyaa-06
 /tests/gates/test_gate_5_run_length.py      @Adithyaa-06
-/tests/gates/test_gate_6_phases.py          @Adithyaa-06
+/tests/gates/test_gate_6_phases.py          @rana-rishith

@@ -1,0 +1,8 @@
+dpkt
+numpy
+pandas
+scipy
+scikit-learn
+pyarrow
+pyyaml
+pytest
