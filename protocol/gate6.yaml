@@ -33,5 +33,6 @@ gate6:
     dev_192_168_137_243: "reported, pending P9 decision (likely controller phone)"
   supporting:
     kl_between_phases: true    # reported, not gating
-    gate_min_passing_devices: 1  # item 6 passes if at least this many devices pass...
+  gate_min_passing_devices: 1  # item 6 passes if at least this many devices pass...
   gate_min_phases_for_pass: 3  # ...counting only devices with >= 3 eligible phases (a lifecycle)  
+
