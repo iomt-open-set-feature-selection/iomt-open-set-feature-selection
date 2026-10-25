@@ -1,0 +1,32 @@
+# Gate item 6: lifecycle phase separation. PROPOSED (B), 2026-10-26.
+# Owner B (@Adithyaa-06), closer A. Fixed before any phase result was computed.
+# Moves into protocol.yaml at the joint freeze.
+
+gate6:
+  phases: [active, idle, interaction, power]     # A10 `phase` column
+  excluded_phases: [unlabelled, background_active, background_idle,
+                    background_interaction, background_power]
+  unit: block                  # mean of b windows; b from results/audit/block_size.json
+  features: all                # every feature in protocol.features
+  transform: log1p
+  classifier:
+    model: random_forest
+    n_estimators: 200
+    class_weight: balanced
+    random_state: 0
+    tuning: none
+  split: leave_one_session_out # group = A10 stream_id (device x capture x session)
+  min_sessions_per_phase: 2    # a phase needs >= 2 sessions to hold one out
+  min_phases_per_device: 2
+  score: balanced_accuracy_adjusted   # sklearn adjusted=True; 0 = chance, 1 = perfect
+  pass_threshold: 0.61         # Landis & Koch (1977): "substantial"
+  permutation:
+    n: 1000
+    level: session             # shuffle phase labels between whole sessions
+    alpha: 0.05
+  scope: per_device            # every usable device tested and reported individually
+  rq5_devices: passing         # RQ5 runs on devices that pass
+  flags:
+    dev_192_168_137_243: "reported, pending P9 decision (likely controller phone)"
+  supporting:
+    kl_between_phases: true    # reported, not gating
