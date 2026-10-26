@@ -1,9 +1,11 @@
-# Python 3.11.9. Pinned at the protocol freeze (closer environment, 26 Oct 2026).
-dpkt  # TODO pin: run pip show dpkt
+# Python 3.11.9. Closer environment (B, 26 Oct 2026), except pyarrow.
+# pyarrow 24.0.0 wrote the handoff parquet files, so the manifest hashes need it.
+# Pending: compare A's and B's full pip freeze in a fresh venv before the freeze merges.
+dpkt==1.9.8
 numpy==2.4.6
 pandas==3.1.0
-scipy  # TODO pin: run pip show scipy
+scipy==1.17.1
 scikit-learn==1.9.1
-pyarrow==26.0.0
-pyyaml  # TODO pin: run pip show pyyaml
-pytest  # TODO pin: run pip show pytest
+pyarrow==24.0.0
+pyyaml==6.0.3
+pytest==9.1.1
