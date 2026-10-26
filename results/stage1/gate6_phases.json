@@ -1,0 +1,232 @@
+{
+ "rule_sha256": "4d65341f4a27f9e0d4c2bf54c0a7d3630f305d976b2a2a0ed9ad2c33575a98b0",
+ "block_windows": 10,
+ "permutation_run": true,
+ "devices": {
+  "Blink_Camera": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 4
+   },
+   "status": "tested",
+   "score": 0.6294,
+   "n_blocks": 5639,
+   "n_sessions": 15,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.001,
+   "passed": true
+  },
+  "Ecobee_Camera": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 5,
+    "power": 1
+   },
+   "status": "tested",
+   "score": 0.552,
+   "n_blocks": 5658,
+   "n_sessions": 16,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.002,
+   "passed": false
+  },
+  "M1T_Camera": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction",
+    "power"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 8,
+    "power": 3
+   },
+   "status": "tested",
+   "score": 0.4456,
+   "n_blocks": 5795,
+   "n_sessions": 22,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.001,
+   "passed": false
+  },
+  "Multifunctional_Pager": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction",
+    "power"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 4,
+    "power": 3
+   },
+   "status": "tested",
+   "score": 0.2236,
+   "n_blocks": 5800,
+   "n_sessions": 18,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.003,
+   "passed": false
+  },
+  "Owltron_Camera": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction",
+    "power"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 9,
+    "power": 2
+   },
+   "status": "tested",
+   "score": 0.676,
+   "n_blocks": 5828,
+   "n_sessions": 22,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.001,
+   "passed": true
+  },
+  "SenseU": {
+   "phases": [
+    "active",
+    "idle",
+    "interaction"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2,
+    "interaction": 3
+   },
+   "status": "tested",
+   "score": 0.3286,
+   "n_blocks": 5590,
+   "n_sessions": 14,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.002,
+   "passed": false
+  },
+  "Singcall": {
+   "phases": [
+    "active",
+    "interaction",
+    "power"
+   ],
+   "sessions_per_phase": {
+    "active": 7,
+    "interaction": 2,
+    "power": 3
+   },
+   "status": "tested",
+   "score": 0.151,
+   "n_blocks": 3603,
+   "n_sessions": 12,
+   "perm_exact": false,
+   "perm_n": 1000,
+   "p_value": 0.03497,
+   "passed": false
+  },
+  "broker": {
+   "phases": [
+    "active",
+    "idle"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2
+   },
+   "status": "tested",
+   "score": 0.5383,
+   "n_blocks": 5500,
+   "n_sessions": 11,
+   "perm_exact": true,
+   "perm_n": 55,
+   "p_value": 0.03636,
+   "passed": false
+  },
+  "dev_192_168_137_185": {
+   "phases": [
+    "active",
+    "idle"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2
+   },
+   "status": "tested",
+   "score": 0.6181,
+   "n_blocks": 5500,
+   "n_sessions": 11,
+   "perm_exact": true,
+   "perm_n": 55,
+   "p_value": 0.01818,
+   "passed": true
+  },
+  "dev_192_168_137_210": {
+   "phases": [],
+   "sessions_per_phase": {},
+   "status": "not_testable",
+   "passed": false
+  },
+  "dev_192_168_137_243": {
+   "phases": [
+    "active",
+    "idle"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2
+   },
+   "status": "tested",
+   "score": 0.3794,
+   "n_blocks": 5500,
+   "n_sessions": 11,
+   "perm_exact": true,
+   "perm_n": 55,
+   "p_value": 0.14545,
+   "passed": false
+  },
+  "dev_192_168_137_59": {
+   "phases": [
+    "active",
+    "idle"
+   ],
+   "sessions_per_phase": {
+    "active": 9,
+    "idle": 2
+   },
+   "status": "tested",
+   "score": 0.8274,
+   "n_blocks": 5500,
+   "n_sessions": 11,
+   "perm_exact": true,
+   "perm_n": 55,
+   "p_value": 0.03636,
+   "passed": true
+  }
+ }
+}
