@@ -14,6 +14,16 @@ B closes items 1-5 by re-running `pytest -m gate tests/gates -v` on their machin
 
 Item 6 (phase separation) is B's; A reviews and closes it once B submits it.
 
+### Item 2: excluded features
+
+IAT and Rate are left out of the item 2 re-extraction check. Re-extracted values differ from the released CSVs by 3% (IAT) and 10% (Rate), above the check's tolerance. Both features are still produced and available to feature selection.
+
+If either ranks in the top k for any selector, we run a sensitivity check with that feature removed and report both results.
+
+## Closer review (B, 26 Oct 2026)
+
+B rebuilt from raw pcaps and reproduced every number above. Items 1, 2 and 5a pass; 3, 4 and 5b fail on data properties. These failures stay on record. Proposed amendments A1-A3 are in protocol/CHANGELOG.md and need approval from both before any re-run.
+
 ## Handoffs to B
 
 - A1: `results/handoff/A1_devices.csv`, `A1_attack_classes.csv`, `A1_features.json`
