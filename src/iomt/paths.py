@@ -6,6 +6,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INTERIM = Path(os.environ.get("IOMT_INTERIM", REPO_ROOT / "data" / "interim"))
+# Fully parsed flood npz. No default: device_map reads every npz under INTERIM and must not see these.
+FLOOD_INTERIM = Path(os.environ["IOMT_FLOOD_INTERIM"]) if os.environ.get("IOMT_FLOOD_INTERIM") else None
 PROCESSED = REPO_ROOT / "data" / "processed"
 STREAMS = PROCESSED / "streams"
 MANIFEST = PROCESSED / "streams_manifest.json"

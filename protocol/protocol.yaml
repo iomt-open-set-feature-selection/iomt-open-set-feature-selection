@@ -14,7 +14,7 @@ frozen_on: null            # YYYY-MM-DD, at the freeze
 datasets:
   primary: CICIoMT2024
   slow_source: IoMT-TrafficData
-  cross_capture: null      # CICIoT2023 dropped 2026-10-20; fallback needs re-scoping
+  cross_capture: none      # CICIoT2023 dropped 2026-10-20; no cross-capture test (B and A, 11 Nov)
 
 # Feature set. PROPOSED (A): ciciomt39, the 2024 README table and the
 # profiling-CSV header (profiling/CSV/*.pcap.csv). Every feature is defined over
@@ -74,15 +74,29 @@ attack_set:
       captures: [MQTT-Malformed_Data]                                                # PROPOSED (A)
     - id: arp_spoofing
       captures: [ARP_Spoofing]                                                       # PROPOSED (A)
+  # PROPOSED (A), changelog A1. base_capture lists the flood capture subtypes
+  # (name prefixes, as in non_flood) whose files make up one ramp family.
   ramps:
     - id: ramp_syn_flood
-      base_capture: null
-      ramp_seconds: null   # list of ramp durations
+      base_capture: [TCP_IP-DDoS-SYN, TCP_IP-DoS-SYN]
+      ramp_seconds: [60, 300, 900]   # list of ramp durations
     - id: ramp_mqtt_publish_flood
-      base_capture: null
-      ramp_seconds: null
+      base_capture: [MQTT-DDoS-Publish_Flood, MQTT-DoS-Publish_Flood]
+      ramp_seconds: [60, 300, 900]
+  # PROPOSED (A), changelog A1: the last this-many seconds of each device's
+  # attacks/train/Benign_train stream are the ramp base and are removed from
+  # the benign streams before validity.benign_split is applied.
+  ramp_reserved_seconds: 3600
+  # MACs whose frames to a device count as flood attacker packets in flood_pairs
+  # and in the amended gate 3 count. Not network.attacker_macs, which device_map
+  # and the recorded count use. Listed one by one; no prefix match. The reason is
+  # the Raspberry Pi vendor prefix dc:a6:32, the same as the pinned attack host
+  # (changelog A1).
+  flood_attacker_macs: ["dc:a6:32:dc:27:d5", "dc:a6:32:c9:e4:ab", "dc:a6:32:c9:e4:d5", "dc:a6:32:c9:e5:a4"]
   floor:                   # fixed-rate floods, reported separately
-    captures: null
+    # All six flood families, as in streams/captures.py. No subset is selected, so the
+    # floor cannot follow a result. Set after the Stage 1 results (post-hoc).
+    captures: [syn_flood, tcp_flood, udp_flood, icmp_flood, mqtt_publish_flood, mqtt_connect_flood]
 
 streams:
   window_seconds: 1.0      # PROPOSED (A): one uniform time window for every class
@@ -104,13 +118,13 @@ streams:
   splice_classifier:
     chance: 0.5
     min_power: 0.8         # power to detect AUC of chance + effect below
-    effect: null           # smallest AUC departure we must be able to see
+    effect: 0.1            # smallest AUC departure we must be able to see (AUC 0.6); round value, no power calculation, set after the Stage 1 results (post-hoc)
 
 selection:
-  selectors: [mi, lgbm_importance, binary_mi]
-  k_grid: null             # e.g. [45, 36, 30, 24, 18, 12, 9, 6]; agree at freeze
+  selectors: [mi, lgbm_importance, binary_mi, random]   # random = ranking drawn at random, the null
+  k_grid: [39, 30, 24, 18, 12, 9, 6]
   held_out_rule: leave_one_family_out
-  seeds: null
+  seeds: [0, 1, 2, 3, 4]
 
 score:
   trained_on: benign_only
@@ -120,7 +134,7 @@ detectors:
   names: [conformal_e, cusum, threshold]
   nominal_arl_windows: 1800        # PROPOSED (A): 30 min between false alarms at 1 s windows
   calibration_split: held_out_benign
-  detection_horizon_seconds: null  # misses beyond this count as misses
+  detection_horizon_seconds: 1800  # misses beyond this count as misses
   conformal_e:                     # PROPOSED (A), Bhattacharyya & Ramdas (2026) sum detector
     thetas: [0.15, 0.30, 0.50, 0.75, 1.0]   # betting grid f(p) = theta * p^(theta-1), uniform prior
     rho: 0.5                                 # shift; theory gives gamma <= ARL <= gamma / rho
@@ -135,8 +149,7 @@ detectors:
   # among candidates that run on every device and give at least
   # validity.min_alarms_for_audit pooled check alarms, the conformal e-detector
   # ratio closest to 1 (smallest |log ratio|) wins, ties to the earlier entry.
-  # The audit split is never read by the study. Calibration cannot change the
-  # theory-threshold check (gate 5 check b).
+  # The audit split is never read by the study.
   calibration:
     candidates:
       - {method: mbb, mbb_len_blocks: 10}
@@ -149,13 +162,15 @@ validity:
   acf_threshold: 0.1       # PROPOSED (A): mean |ACF| at the block lag, every device
   run_length_tolerance: 0.2        # PROPOSED (A): measured/nominal within [0.8, 1.2]
   block_grid_windows: [1, 2, 3, 5, 10, 15, 20, 30, 45, 60]   # PROPOSED (A)
-  min_alarms_for_audit: 30         # PROPOSED (A): fewer pooled alarms = inconclusive
+  block_windows: 10                # PROPOSED (A), changelog A2: b = 10 is fixed; autocorr.py reports the ACF at it and no longer selects it
+  min_alarms_for_audit: 30         # PROPOSED (A): fewer expected audit alarms (E in changelog A3) = inconclusive
+  audit_excluded_roles: [broker]   # PROPOSED (A), changelog A3: devices with these roles are not audited; rows are kept and marked
   benign_split: [0.4, 0.2, 0.2, 0.2]   # PROPOSED (A): score fit / conformal reference / threshold tuning / audit, chronological within each capture
 
 statistics:
   alpha: 0.05
   correction: holm
-  equivalence_margin: null # in delay-inflation units; set now so a flat result counts
+  equivalence_margin: [0.8, 1.25]   # delay inflation within [0.8, 1.25] counts as equivalent (B, 11 Nov)
   unit: attack_nested_in_family
 
 gate:
@@ -168,15 +183,21 @@ gate:
     min_benign_span_seconds: 1800
     require_attack_presence: true      # device must appear in >= 1 non-flood attack capture
     min_attack_capture_packets: 50
+    # Hosts that are not IoMT devices. e6:aa:e4:09:fc:8a (dev_192_168_137_243)
+    # mirrors the camera's traffic in every camera interaction capture; likely
+    # the controlling phone (B, PR #2, finding 2).
+    excluded_macs: ["e6:aa:e4:09:fc:8a"]
   # Gate item 2: re-extracted vs released CSV, on deterministic per-packet features.
   # PROPOSED (A), CHANGED 2026-10-23 and needs B's agreement at the freeze.
   # csv_match_min_fraction was a row-by-row match. It is not obtainable: the
   # released row order cannot be reproduced from the pcap (see csv_match.py), so
   # that number sits near zero however the features are defined. The distributions
-  # do agree, so the gate now asks that every deterministic feature's quantiles
-  # match within csv_match_max_quantile_diff. The row fraction is still recorded.
+  # do agree, so the gate now asks that, for every deterministic feature, the
+  # median of the 101 relative quantile gaps (quantiles 0, 0.01, ..., 1) is within
+  # csv_match_max_quantile_diff. Up to half of the quantiles can differ by more.
+  # The row fraction is still recorded.
   csv_match_min_fraction: 0.95         # evidence only; no longer gated
-  csv_match_max_quantile_diff: 0.01    # PROPOSED (A): 1% on matched quantiles
+  csv_match_max_quantile_diff: 0.01    # PROPOSED (A): 1% on the median quantile gap
   # Gate item 3: an attack is (capture, target device) with at least this many attacker packets.
   min_attacker_packets_per_attack: 20  # PROPOSED (A)
 
@@ -191,7 +212,9 @@ network:
   # ARP frames claiming 192.168.137.1 in ARP_Spoofing_train) but also ~98 benign
   # packets, so "absent from benign captures" misidentifies it. The inferred set
   # is still reported in device_inventory.json as a cross-check.
-  # fa:3a:d3:4c:e3:37 is attacker-like but appears only in flood captures.
+  # fa:3a:d3:4c:e3:37 is the only MAC in attackers_inferred but is not pinned: it
+  # is present in profiling/Active, and in ARP_Spoofing and Recon-Ping_Sweep
+  # every packet involving it comes from the pinned attacker, so it reads as a target.
   attacker_macs: ["dc:a6:32:dc:27:d5"]
 
 extended:

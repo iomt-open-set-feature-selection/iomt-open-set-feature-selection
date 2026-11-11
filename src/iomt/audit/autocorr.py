@@ -6,8 +6,10 @@ each block. For every b on protocol validity.block_grid_windows, compute the
 lag-1 autocorrelation of the block means for each non-constant feature and
 take the mean absolute value across features (pooled over captures, weighted
 by block count). A device's block size is the smallest b with mean |ACF| below
-validity.acf_threshold. The study uses one block size: the largest of the
-per-device choices, so every device is below threshold at it.
+validity.acf_threshold. The study uses one block size, pinned by
+validity.block_windows (changelog A2) so a rerun cannot move it; the per-device
+choices and curves are still written, and devices above the threshold at the
+pinned size are listed.
 
 Detection delay grows by about one block, so the smallest b that works is
 chosen. Per-device curves are kept for review.
@@ -80,8 +82,7 @@ def run(cfg):
         }
         if chosen is None:
             failing.append(dev)
-    chosen_all = [v["chosen_block_windows"] for v in per_device.values() if v["chosen_block_windows"]]
-    block = max(chosen_all) if chosen_all else None
+    block = int(P.require(cfg, "validity.block_windows"))
     at_block = {d: (v["mean_abs_acf_lag1"].get(str(block)) if block else None) for d, v in per_device.items()}
     above = [d for d, a in at_block.items() if a is None or a >= thr]
     return {
