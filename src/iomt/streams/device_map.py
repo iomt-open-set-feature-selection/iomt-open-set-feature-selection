@@ -18,6 +18,7 @@ in such a capture takes the name.
 
 Usable stream (protocol gate.usable_stream): role device or broker, enough
 benign activity, and (if required) present in a non-flood attack capture.
+A host whose MAC is in gate.usable_stream.excluded_macs is never usable.
 
 Output: results/stage1/device_inventory.json and device_inventory.csv
 """
@@ -117,6 +118,7 @@ def build_inventory(cfg: dict, interim: Path = INTERIM) -> dict:
     min_span = float(crit.get("min_benign_span_seconds", 1800))
     need_attack = bool(crit.get("require_attack_presence", True))
     min_att_pkts = int(crit.get("min_attack_capture_packets", 50))
+    excluded = {m.lower() for m in crit.get("excluded_macs", []) or []}
 
     caps = list(parsed_captures(interim))
     if not caps:
@@ -269,6 +271,8 @@ def build_inventory(cfg: dict, interim: Path = INTERIM) -> dict:
             reasons.append(f"benign span {h['benign_span_s']:.0f}s < {min_span:.0f}s")
         if need_attack and not a:
             reasons.append("absent from every non-flood attack capture")
+        if h["mac"] in excluded:
+            reasons.append("excluded by gate.usable_stream.excluded_macs")
         h["usable"] = not reasons
         h["unusable_reasons"] = reasons
 

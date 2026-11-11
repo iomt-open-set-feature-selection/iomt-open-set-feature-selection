@@ -30,3 +30,19 @@ def test_enough_non_flood_classes(cfg):
 def test_every_non_flood_capture_parsed():
     ai = load_artifact(AI)
     assert not ai["skipped_captures"], f"non-flood captures not analysed: {ai['skipped_captures']}"
+
+
+def test_amended_count_enough_families(cfg):
+    """Changelog A1: recorded families plus ramp families; the test above is unchanged."""
+    ai = load_artifact(AI)
+    assert_current_protocol(ai, "attack_inventory.json")
+    if "amended_gate3" not in ai:
+        note = ai.get("flood_pairs_note", "no amended count in attack_inventory.json; parse the floods and rerun")
+        # only a null MAC list means the amended count is not in force; a missing flood folder is a failure
+        (pytest.skip if "flood_attacker_macs is null" in note else pytest.fail)(note)
+    am = ai["amended_gate3"]
+    assert am["status"] == "complete", f"amended count is incomplete; no full parse for {am['missing_files']}"
+    min_cls = int(P.require(cfg, "gate.min_non_flood_classes"))
+    assert am["n_families_with_enough"] >= min_cls, (
+        f"amended count: {am['recorded_families_enough']} recorded families + ramp attacks {am['ramp_attacks']}; "
+        f"need {min_cls} families")

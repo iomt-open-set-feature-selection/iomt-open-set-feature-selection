@@ -17,8 +17,8 @@ import pandas as pd
 
 from iomt import protocol as P
 from iomt.contracts import features_for
-from iomt.paths import AUDIT, HANDOFF, PROCESSED, STAGE1, ensure
-from iomt.streams.load import manifest
+from iomt.paths import AGG, AUDIT, HANDOFF, PROCESSED, STAGE1, ensure
+from iomt.streams.load import RAMP_BASE_CAPTURE, manifest, reserved_windows
 
 FEATURE_DEFINITIONS_39 = {
     "Header_Length": "mean transport-header length in the window (TCP data offset, UDP 8, else 0)",
@@ -92,8 +92,9 @@ def a1(cfg):
         json.dump(out, f, indent=1)
 
 
-def a10():
+def a10(cfg):
     m = manifest()
+    n_res = reserved_windows(cfg)
     rows = []
     for sid, info in m["streams"].items():
         if info.get("kind") != "benign":
@@ -103,6 +104,9 @@ def a10():
                      "source_capture": info["source_captures"][0], "phase": info.get("phase"),
                      "phase_detail": info.get("phase_detail"), "file": info["file"],
                      "sha256": info["sha256"], "n_windows": info["n_windows"],
+                     # windows benign_segments keeps: the ramp base is cut from Benign_train streams
+                     "usable_windows": (info["n_windows"] - n_res if info["source_captures"][0] == RAMP_BASE_CAPTURE
+                                        and info["n_windows"] >= n_res else info["n_windows"]),
                      "n_packets": info["n_packets"],
                      "active_fraction": float((df["n_pkts"] > 0).mean()),
                      "t_abs_start": float(df["t_abs"].iloc[0]), "t_abs_end": float(df["t_abs"].iloc[-1])})
@@ -142,13 +146,23 @@ def gate_report(cfg):
         f"{bs['devices_above_threshold_at_block'] or 'none'}")
     g5 = _load(STAGE1 / "gate5_run_length.json")
     c = g5["pooled"]["conformal_e/calibrated"]
+    ca = g5["pooled"]["conformal_e/calibrated_audited"]
     t = g5["pooled"]["conformal_e/theory"]
+    d = g5["detectors"]["conformal_e"]
     cl = g5.get("calibration") or {}
     cl = (f"mbb{cl.get('mbb_len_blocks')}" if cl.get("method") == "mbb" else cl.get("method", "mbb10"))
     row(5, g5["passes"], f"calibration {cl} (chosen on the tuning split); "
-                         f"calibrated ratio {c['ratio']:.2f} over {c['alarms']} alarms; "
-                         f"theory-threshold ARL {t['measured_arl_blocks']:.0f} vs nominal {t['nominal_arl_blocks']:.0f} blocks"
-                         + (" (INCONCLUSIVE: too few alarms)" if g5["check_a_inconclusive_too_few_alarms"] else ""))
+                         f"conformal_e {d['verdict']} ({d['passed']}/{d['audited']} audited devices pass; "
+                         f"failed {d['failed'] or 'none'}; inconclusive {d['inconclusive'] or 'none'}); "
+                         f"pooled calibrated ratio {c['ratio']:.2f} with broker, {ca['ratio']:.2f} without; "
+                         f"theory-threshold ARL {t['measured_arl_blocks']:.0f} vs nominal {t['nominal_arl_blocks']:.0f} blocks (reported only)")
+    acf = pd.read_csv(AGG / "run_length.csv").drop_duplicates("device_id").set_index("device_id")["score_block_acf1_audit"]
+    fmt = lambda x: "-" if pd.isna(x) else f"{x:.2f}"
+    L += ["", "## Autocorrelation per device", "",
+          f"| Device | raw features, mean abs lag-1 ACF (b = 1) | block means, b = {bs['block_windows']} | "
+          "block scores, audit split |", "|---|---|---|---|"]
+    L += [f"| {dev} | {fmt(v['mean_abs_acf_lag1'].get('1'))} | {fmt(bs['mean_abs_acf_at_block'].get(dev))} | "
+          f"{fmt(acf.get(dev))} |" for dev, v in bs["per_device"].items()]
     L += ["", "Item 6 (phase separation) is B's; A reviews and closes it once B submits it.", "",
           "## Handoffs to B", "", "- A1: `results/handoff/A1_devices.csv`, `A1_attack_classes.csv`, `A1_features.json`",
           "- A10: `results/handoff/A10_benign_windows_index.csv` + the `benign__*.parquet` files it lists",
@@ -170,7 +184,7 @@ def main():
     cfg = P.load()
     ensure(HANDOFF, STAGE1)
     a1(cfg)
-    a10()
+    a10(cfg)
     gate_report(cfg)
 
 

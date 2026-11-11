@@ -1,5 +1,5 @@
 {
- "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "protocol_sha256": "f5db6416f5c573b457faa6abea42643c27747122c2984d6ee108f2a2f9efc324",
  "window_seconds": 1.0,
  "criteria": {
   "min_benign_active_windows": 600,
@@ -8564,8 +8564,10 @@
     "attacks/train/Recon-Port_Scan_train",
     "attacks/train/Recon-VulScan_train"
    ],
-   "usable": true,
-   "unusable_reasons": [],
+   "usable": false,
+   "unusable_reasons": [
+    "excluded by gate.usable_stream.excluded_macs"
+   ],
    "device_id": "dev_192_168_137_243"
   },
   {
@@ -10801,7 +10803,7 @@
    "name": null
   }
  ],
- "n_usable_streams": 12,
+ "n_usable_streams": 11,
  "usable_device_ids": [
   "broker",
   "Ecobee_Camera",
@@ -10811,7 +10813,6 @@
   "Multifunctional_Pager",
   "Singcall",
   "SenseU",
-  "dev_192_168_137_243",
   "M1T_Camera",
   "dev_192_168_137_59",
   "Owltron_Camera"

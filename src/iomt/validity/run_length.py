@@ -13,15 +13,17 @@ Per usable device, at full features:
      blocks only, so the audit split is still unseen here.
   4. Audit: run on the audit blocks in their real order, restarting after every
      alarm, and estimate ARL = audit blocks / alarms.
-  5. e-detector only, theory check: threshold = gamma (no calibration). The
-     anytime-valid result says ARL >= gamma under exchangeability. Calibration
-     cannot change this check.
+  5. e-detector only: also run with threshold = gamma (no calibration), reported
+     as a number; no gate reads it.
 
-Gate 5 passes when, pooled over devices,
-  (a) calibrated e-detector: measured / nominal within 1 +/- run_length_tolerance,
-      with at least validity.min_alarms_for_audit alarms (otherwise inconclusive);
-  (b) theory threshold: measured ARL >= (1 - tolerance) * gamma.
-CUSUM and the fixed threshold are audited the same way and reported, not gated.
+Verdicts (changelog A3, A4). Devices whose role is in validity.audit_excluded_roles
+are not audited; their rows are kept and marked. Per audited device, with
+E = audit blocks / nominal ARL in blocks (expected alarms), in this order:
+calibration not reached = fail; E < validity.min_alarms_for_audit = inconclusive;
+else the log ratio against a band that widens as E falls. Per detector: fail if
+any audited device fails, pass if none fails and at least half pass, else
+inconclusive. Gate 5 passes when the conformal e-detector passes. CUSUM and the
+threshold detector get the same verdicts; a fail marks them unmatched.
 
 Outputs: results/aggregated/run_length.csv, results/stage1/gate5_run_length.json
 """
@@ -39,6 +41,7 @@ from iomt.detectors import make
 from iomt.detectors.calibrate import calibrate_with, candidate_label
 from iomt.detectors.score import BenignScore
 from iomt.paths import AGG, AUDIT, STAGE1, ensure
+from iomt.streams.device_map import load_inventory
 from iomt.streams.load import benign_segments
 
 STUDY = STAGE1 / "gate5_calibration_study.json"
@@ -127,8 +130,27 @@ def device_audit(dev, bs, features, b, cfg, rng, calib, seed=0):
     return rows
 
 
-def pooled(df, detector, mode):
+def device_verdict(calibration_reached, expected, ratio, tol, min_expected) -> str:
+    """Per-device A3 rule, steps in order. n = 0 gives an infinite ratio, which is above the band."""
+    if not calibration_reached:
+        return "fail"
+    if expected < min_expected:
+        return "inconclusive"
+    half = 1.96 / np.sqrt(expected)
+    return "pass" if np.log(1 - tol) - half <= np.log(ratio) <= np.log(1 + tol) + half else "fail"
+
+
+def detector_verdict(verdicts: list[str]) -> str:
+    """Detector level: fail if any audited device fails; pass if none fails and at least half pass."""
+    if "fail" in verdicts:
+        return "fail"
+    return "pass" if verdicts and 2 * verdicts.count("pass") >= len(verdicts) else "inconclusive"
+
+
+def pooled(df, detector, mode, audited_only=False):
     s = df[(df.detector == detector) & (df.threshold_mode == mode) & (df.status == "ok")]
+    if audited_only:
+        s = s[~s.audit_excluded.astype(bool)]
     blocks, alarms = int(s.audit_blocks.sum()), int(s.alarms.sum())
     gamma = float(s.nominal_arl_blocks.iloc[0]) if len(s) else np.nan
     arl = blocks / alarms if alarms else float("inf")
@@ -141,36 +163,48 @@ def run(cfg, seed=0):
     b = block_size()
     calib = chosen_calibration(cfg)
     tol = float(P.require(cfg, "validity.run_length_tolerance"))
-    min_al = int(P.get(cfg, "validity.min_alarms_for_audit", 30))
+    min_al = int(P.require(cfg, "validity.min_alarms_for_audit"))
+    excluded_roles = set(P.require(cfg, "validity.audit_excluded_roles"))
+    roles = {h["device_id"]: h["role"] for h in load_inventory()["hosts"] if "device_id" in h}
     rng = np.random.default_rng(seed)
     rows = []
     for dev, segs in sorted(benign_segments().items()):
         bs = device_block_scores(dev, segs, features, b, cfg, seed)
         if bs is None:
-            rows.append({"device_id": dev, "status": "too little benign data"})
+            # E = 0 is below the minimum: inconclusive, and the device stays in the base of the detector rule
+            rows.append({"device_id": dev, "status": "too little benign data", "expected_alarms": 0.0,
+                         "audit_excluded": roles.get(dev) in excluded_roles,
+                         "verdict": "excluded" if roles.get(dev) in excluded_roles else "inconclusive"})
             continue
         r = device_audit(dev, bs, features, b, cfg, rng, calib, seed)
         rows.extend(r)
         for x in r:
+            x["audit_excluded"] = roles.get(dev) in excluded_roles
+            if x["threshold_mode"] == "calibrated":
+                x["expected_alarms"] = x["audit_blocks"] / x["nominal_arl_blocks"]
+                x["verdict"] = "excluded" if x["audit_excluded"] else device_verdict(
+                    x["calibration_reached"], x["expected_alarms"], x["ratio"], tol, min_al)
             print(f"{dev:28s} {x['detector']:12s} {x['threshold_mode']:10s} "
                   f"alarms {x['alarms']:4d}/{x['audit_blocks']:6d} blocks  ratio {x['ratio']:.2f}", flush=True)
     df = pd.DataFrame(rows)
     res = {"protocol_sha256": P.sha256(), "block_windows": b, "tolerance": tol,
-           "min_alarms_for_audit": min_al, "calibration": calib, "pooled": {}}
+           "min_alarms_for_audit": min_al, "audit_excluded_roles": sorted(excluded_roles),
+           "calibration": calib, "pooled": {}, "detectors": {}}
+    short = df[(df.status != "ok") & ~df.audit_excluded.astype(bool)].device_id
     for name in df.detector.dropna().unique():
         res["pooled"][f"{name}/calibrated"] = pooled(df, name, "calibrated")
-    res["pooled"]["conformal_e/theory"] = pooled(df, "conformal_e", "theory")
-    cal = res["pooled"]["conformal_e/calibrated"]
-    thy = res["pooled"]["conformal_e/theory"]
-    a_ok = cal["alarms"] >= min_al and cal["ratio"] is not None and abs(cal["ratio"] - 1) <= tol
-    a_inconclusive = cal["alarms"] < min_al
-    b_ok = thy["measured_arl_blocks"] >= (1 - tol) * thy["nominal_arl_blocks"]
-    res["check_a_calibrated_within_tolerance"] = bool(a_ok)
-    res["check_a_inconclusive_too_few_alarms"] = bool(a_inconclusive)
-    res["check_b_theory_threshold_valid"] = bool(b_ok)
-    res["passes"] = bool(a_ok and b_ok)
-    res["note"] = ("inconclusive: lower detectors.nominal_arl_windows or add benign data"
-                   if a_inconclusive else "")
+        res["pooled"][f"{name}/calibrated_audited"] = pooled(df, name, "calibrated", audited_only=True)
+        cal = df[(df.detector == name) & (df.threshold_mode == "calibrated") & (df.status == "ok")]
+        cal = cal[~cal.audit_excluded.astype(bool)]
+        v = dict(zip(cal.device_id, cal.verdict)) | {d: "inconclusive" for d in short}
+        res["detectors"][name] = {"verdict": detector_verdict(list(v.values())), "devices": v,
+                                  "audited": len(v), "passed": list(v.values()).count("pass"),
+                                  "failed": [d for d, x in v.items() if x == "fail"],
+                                  "inconclusive": [d for d, x in v.items() if x == "inconclusive"]}
+    res["pooled"]["conformal_e/theory"] = pooled(df, "conformal_e", "theory")   # reported only
+    res["passes"] = res["detectors"]["conformal_e"]["verdict"] == "pass"
+    res["unmatched"] = [n for n, d in res["detectors"].items() if d["verdict"] == "fail"]
+    res["not_confirmed"] = [n for n, d in res["detectors"].items() if d["verdict"] == "inconclusive"]
     return res, df
 
 
@@ -186,9 +220,9 @@ def main(argv=None):
         json.dump(res, f, indent=1)
     print(json.dumps(res["pooled"], indent=1))
     print(f"calibration: {candidate_label(res['calibration'])}")
-    print(f"(a) calibrated within tolerance: {res['check_a_calibrated_within_tolerance']}"
-          f"{'  [INCONCLUSIVE: too few alarms]' if res['check_a_inconclusive_too_few_alarms'] else ''}")
-    print(f"(b) theory threshold valid: {res['check_b_theory_threshold_valid']}")
+    for name, d in res["detectors"].items():
+        print(f"{name}: {d['verdict']} ({d['passed']}/{d['audited']} audited devices pass; "
+              f"failed {d['failed']}; inconclusive {d['inconclusive']})")
     print("GATE 5", "PASS" if res["passes"] else "FAIL")
 
 
