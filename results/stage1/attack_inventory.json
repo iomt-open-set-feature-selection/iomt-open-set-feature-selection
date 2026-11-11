@@ -1,11 +1,11 @@
 {
- "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "protocol_sha256": "f5db6416f5c573b457faa6abea42643c27747122c2984d6ee108f2a2f9efc324",
  "min_attacker_packets_per_attack": 20,
  "min_attacks_per_class": 5,
  "min_non_flood_classes": 3,
  "per_family": {
   "recon": {
-   "attacks": 32,
+   "attacks": 31,
    "devices": [
     "Blink_Camera",
     "Ecobee_Camera",
@@ -14,8 +14,7 @@
     "Owltron_Camera",
     "SenseU",
     "Singcall",
-    "broker",
-    "dev_192_168_137_243"
+    "broker"
    ],
    "captures": [
     "attacks/test/Recon-OS_Scan_test",
@@ -26,7 +25,7 @@
     "attacks/train/Recon-Port_Scan_train",
     "attacks/train/Recon-VulScan_train"
    ],
-   "attacker_packets": 592448,
+   "attacker_packets": 592427,
    "enough": true
   },
   "malformed_mqtt": {
@@ -73,7 +72,7 @@
    "enough": true
   },
   "Recon-Ping_Sweep": {
-   "attacks": 2,
+   "attacks": 1,
    "enough": false
   },
   "Recon-Port_Scan": {
@@ -114,6 +113,1947 @@
    "csv_rows": 2702529
   }
  },
+ "flood_pairs": [
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 1581366,
+   "first_attacker_ts": 1693339080.17944,
+   "last_attacker_ts": 1693339546.221046,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 520516
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 515368
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 510245
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4142
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 64
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 20
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 25
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 19
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 53
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 2407252,
+   "first_attacker_ts": 1693329558.589356,
+   "last_attacker_ts": 1693330080.443046,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 2407252
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 1094
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 132
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4284
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 62
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 11
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 32
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 60
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 62
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "broker",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 14577863,
+   "first_attacker_ts": 1693926260.908752,
+   "last_attacker_ts": 1693926623.193996,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 5663675
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 3936540
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 3854612
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 16103
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 801
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 75
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 12
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "Singcall",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 70
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 241,
+   "first_attacker_ts": 1693925886.440592,
+   "last_attacker_ts": 1693926617.549758,
+   "top_src_macs": [
+    {
+     "mac": "00:27:10:cb:17:60",
+     "packets": 910686
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 241
+    },
+    {
+     "mac": "fc:67:1f:f7:cb:07",
+     "packets": 8
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 2084758,
+   "first_attacker_ts": 1693925885.918789,
+   "last_attacker_ts": 1693926120.385487,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 1110952
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 490376
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 483201
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "broker",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 11093194,
+   "first_attacker_ts": 1693926623.195774,
+   "last_attacker_ts": 1693926900.513103,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 4133557
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 3521883
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 3437754
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 4535139,
+   "first_attacker_ts": 1693928108.149456,
+   "last_attacker_ts": 1693928224.849489,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 1310771
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 1303066
+    },
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 1017857
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 3839
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 46
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 8
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 32
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "broker",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 21
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 13052385,
+   "first_attacker_ts": 1693928224.850875,
+   "last_attacker_ts": 1693928609.809045,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 5402277
+    },
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 3538236
+    },
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 3248465
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 768
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 47
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 8
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 13
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 30
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "broker",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 58
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 28
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 22278
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 372
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 616
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 16776589,
+   "first_attacker_ts": 1693924718.840871,
+   "last_attacker_ts": 1693925340.191742,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 11992841
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 1680182
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 1563527
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 335,
+   "first_attacker_ts": 1693924723.977265,
+   "last_attacker_ts": 1693925885.40673,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 335
+    },
+    {
+     "mac": "fc:67:1f:e1:9e:58",
+     "packets": 52
+    },
+    {
+     "mac": "fc:67:1f:f7:cb:07",
+     "packets": 1
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 2805571,
+   "first_attacker_ts": 1693925479.920337,
+   "last_attacker_ts": 1693925885.91871,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 1123803
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 1083952
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 400975
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 11
+    },
+    {
+     "mac": "a8:6b:ad:1f:9b:e5",
+     "packets": 2
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 7300026,
+   "first_attacker_ts": 1693492107.120031,
+   "last_attacker_ts": 1693492572.037116,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 7300026
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 25613
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 11001
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 53
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 31
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "Singcall",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 3
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 33
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 15
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 42
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 20
+    },
+    {
+     "mac": "a8:6b:ad:1f:9b:e5",
+     "packets": 3
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 1444518,
+   "first_attacker_ts": 1693492572.037592,
+   "last_attacker_ts": 1693492680.151127,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 1444518
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 16855
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 5977
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 707
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 76
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 15
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 42
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 8825409,
+   "first_attacker_ts": 1693492813.233317,
+   "last_attacker_ts": 1693493339.40792,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 8825409
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 1716
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 271
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 64
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 2968646,
+   "first_attacker_ts": 1693494511.23486,
+   "last_attacker_ts": 1693494698.199673,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 2968646
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 401
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 48
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 28458
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "dev_192_168_137_185",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 3
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 296
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 121
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "Singcall",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 60
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 119
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 1898383,
+   "first_attacker_ts": 1693493339.40792,
+   "last_attacker_ts": 1693493460.536509,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 1898383
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 392
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 199
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 4324070,
+   "first_attacker_ts": 1693493588.012318,
+   "last_attacker_ts": 1693494239.978837,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 4324070
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 242
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 142
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 200
+    },
+    {
+     "mac": "a8:6b:ad:1f:9b:e5",
+     "packets": 51
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 30
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 806474,
+   "first_attacker_ts": 1693492028.254033,
+   "last_attacker_ts": 1693492107.120031,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 806474
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 22669
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 4781
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 26
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 781
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 2952639,
+   "first_attacker_ts": 1693490321.440314,
+   "last_attacker_ts": 1693490940.779146,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 2952639
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 685
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 652
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "Singcall",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 6761599,
+   "first_attacker_ts": 1693491075.566431,
+   "last_attacker_ts": 1693491720.438852,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 6761599
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 453
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 337
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 197
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 315
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 297
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 464255,
+   "first_attacker_ts": 1693339546.221156,
+   "last_attacker_ts": 1693339680.146002,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 349608
+    },
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 82380
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 21154
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 77
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 14
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 7
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 5
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 11
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 459733,
+   "first_attacker_ts": 1693330080.444107,
+   "last_attacker_ts": 1693330200.734988,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 459733
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 244
+    },
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 28
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 58
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 14
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 2
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 6
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 4
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 11
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "broker",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 123
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 5061812,
+   "first_attacker_ts": 1693928609.809045,
+   "last_attacker_ts": 1693928760.324357,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 2297088
+    },
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 1439012
+    },
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 1325712
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 832
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 193
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 296
+    },
+    {
+     "mac": "fa:3a:d3:4c:e3:37",
+     "packets": 5
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "Singcall",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 6162732,
+   "first_attacker_ts": 1693929907.448159,
+   "last_attacker_ts": 1693930560.113272,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 1972928
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 1813832
+    },
+    {
+     "mac": "dc:a6:32:c9:e4:d5",
+     "packets": 1219864
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 3254188,
+   "first_attacker_ts": 1693928894.667359,
+   "last_attacker_ts": 1693929540.417066,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:c9:e4:ab",
+     "packets": 1203576
+    },
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 1129799
+    },
+    {
+     "mac": "dc:a6:32:c9:e5:a4",
+     "packets": 789549
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 197
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "broker",
+   "ips_from": "inventory",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 6134041,
+   "first_attacker_ts": 1693494698.199676,
+   "last_attacker_ts": 1693495140.431581,
+   "top_src_macs": [
+    {
+     "mac": "dc:a6:32:dc:27:d5",
+     "packets": 6134041
+    },
+    {
+     "mac": "e6:aa:e4:09:fc:8a",
+     "packets": 755
+    },
+    {
+     "mac": "a8:6b:ad:1f:9b:e5",
+     "packets": 44
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "Ecobee_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 244
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "dev_192_168_137_210",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 209
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "Blink_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 50
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "Multifunctional_Pager",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 9
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "SenseU",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 28
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "M1T_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 15
+    }
+   ]
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "device_id": "Owltron_Camera",
+   "ips_from": "capture",
+   "ramp_family": "ramp_syn_flood",
+   "attacker_packets": 0,
+   "first_attacker_ts": null,
+   "last_attacker_ts": null,
+   "top_src_macs": [
+    {
+     "mac": "8c:ae:4c:dd:1e:39",
+     "packets": 38
+    }
+   ]
+  }
+ ],
+ "flood_skipped": [],
+ "flood_files": [
+  {
+   "capture_id": "attacks/train/MQTT-DDoS-Publish_Flood_train",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "capture_t0": 1693339020.157146,
+   "capture_t1": 1693339546.221046
+  },
+  {
+   "capture_id": "attacks/train/MQTT-DoS-Publish_Flood_train",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "capture_t0": 1693329540.179304,
+   "capture_t1": 1693330080.443046
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN1_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693925885.918789,
+   "capture_t1": 1693926623.195082
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN2_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693926623.195082,
+   "capture_t1": 1693928224.850094
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN3_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693928224.850094,
+   "capture_t1": 1693928609.809045
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DDoS-SYN4_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693924680.397949,
+   "capture_t1": 1693925885.91871
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN1_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693492107.120031,
+   "capture_t1": 1693492572.037413
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN2_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693492572.037444,
+   "capture_t1": 1693493339.40792
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN3_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693493339.40792,
+   "capture_t1": 1693494698.199673
+  },
+  {
+   "capture_id": "attacks/train/TCP_IP-DoS-SYN4_train",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693490280.512922,
+   "capture_t1": 1693492107.120031
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DDoS-Publish_Flood_test",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "capture_t0": 1693339546.221156,
+   "capture_t1": 1693339680.340611
+  },
+  {
+   "capture_id": "attacks/test/MQTT-DoS-Publish_Flood_test",
+   "ramp_family": "ramp_mqtt_publish_flood",
+   "capture_t0": 1693330080.443891,
+   "capture_t1": 1693330200.734988
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DDoS-SYN_test",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693928609.809045,
+   "capture_t1": 1693930560.173119
+  },
+  {
+   "capture_id": "attacks/test/TCP_IP-DoS-SYN_test",
+   "ramp_family": "ramp_syn_flood",
+   "capture_t0": 1693494698.199676,
+   "capture_t1": 1693495140.462959
+  }
+ ],
  "attacks": [
   {
    "attack_id": "arp_spoofing__ARP_Spoofing_train__broker",
@@ -231,21 +2171,6 @@
    "device_packets": 12,
    "first_attacker_packet_after_capture_start_s": 6.687115907669067,
    "attacker_active_s": 4862.053547143936,
-   "capture_seconds": 6190.541867017746,
-   "episodes_of_300s": 16,
-   "counts": false
-  },
-  {
-   "attack_id": "arp_spoofing__ARP_Spoofing_train__dev_192_168_137_243",
-   "family": "arp_spoofing",
-   "subtype": "ARP_Spoofing",
-   "capture_id": "attacks/train/ARP_Spoofing_train",
-   "split": "train",
-   "device_id": "dev_192_168_137_243",
-   "attacker_packets": 12,
-   "device_packets": 69710,
-   "first_attacker_packet_after_capture_start_s": 6.677077054977417,
-   "attacker_active_s": 4861.868918895721,
    "capture_seconds": 6190.541867017746,
    "episodes_of_300s": 16,
    "counts": false
@@ -549,21 +2474,6 @@
    "capture_seconds": 90.63233709335327,
    "episodes_of_300s": 0,
    "counts": false
-  },
-  {
-   "attack_id": "recon__Recon-Ping_Sweep_train__dev_192_168_137_243",
-   "family": "recon",
-   "subtype": "Recon-Ping_Sweep",
-   "capture_id": "attacks/train/Recon-Ping_Sweep_train",
-   "split": "train",
-   "device_id": "dev_192_168_137_243",
-   "attacker_packets": 21,
-   "device_packets": 21,
-   "first_attacker_packet_after_capture_start_s": 10.99682903289795,
-   "attacker_active_s": 73.34734296798706,
-   "capture_seconds": 90.63233709335327,
-   "episodes_of_300s": 0,
-   "counts": true
   },
   {
    "attack_id": "recon__Recon-Ping_Sweep_train__M1T_Camera",
@@ -1001,21 +2911,6 @@
    "counts": false
   },
   {
-   "attack_id": "recon__Recon-Ping_Sweep_test__dev_192_168_137_243",
-   "family": "recon",
-   "subtype": "Recon-Ping_Sweep",
-   "capture_id": "attacks/test/Recon-Ping_Sweep_test",
-   "split": "test",
-   "device_id": "dev_192_168_137_243",
-   "attacker_packets": 6,
-   "device_packets": 6,
-   "first_attacker_packet_after_capture_start_s": 3.0244228839874268,
-   "attacker_active_s": 14.081995010375977,
-   "capture_seconds": 29.744991064071655,
-   "episodes_of_300s": 0,
-   "counts": false
-  },
-  {
    "attack_id": "recon__Recon-Ping_Sweep_test__M1T_Camera",
    "family": "recon",
    "subtype": "Recon-Ping_Sweep",
@@ -1135,5 +3030,17 @@
    "episodes_of_300s": 0,
    "counts": true
   }
- ]
+ ],
+ "amended_gate3": {
+  "status": "complete",
+  "missing_files": [],
+  "recorded_families_enough": 2,
+  "ramp_attacks": {
+   "ramp_syn_flood": 11,
+   "ramp_mqtt_publish_flood": 0
+  },
+  "ramp_families_enough": 1,
+  "n_families_with_enough": 3,
+  "passes": true
+ }
 }

@@ -1,44 +1,142 @@
 {
- "protocol_sha256": "89f215861caf1b133a74e252c2dcc5fec0cbbe985e6747097f922b0bb08770dc",
+ "protocol_sha256": "f5db6416f5c573b457faa6abea42643c27747122c2984d6ee108f2a2f9efc324",
  "block_windows": 10,
  "tolerance": 0.2,
  "min_alarms_for_audit": 30,
+ "audit_excluded_roles": [
+  "broker"
+ ],
  "calibration": {
   "method": "contiguous"
  },
  "pooled": {
   "conformal_e/calibrated": {
-   "audit_blocks": 63608,
-   "alarms": 409,
-   "measured_arl_blocks": 155.520782396088,
+   "audit_blocks": 56892,
+   "alarms": 352,
+   "measured_arl_blocks": 161.625,
    "nominal_arl_blocks": 180.0,
-   "ratio": 0.8640043466449334
+   "ratio": 0.8979166666666667
+  },
+  "conformal_e/calibrated_audited": {
+   "audit_blocks": 51139,
+   "alarms": 315,
+   "measured_arl_blocks": 162.34603174603174,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.9019223985890652
   },
   "cusum/calibrated": {
-   "audit_blocks": 63608,
-   "alarms": 518,
-   "measured_arl_blocks": 122.79536679536679,
+   "audit_blocks": 56892,
+   "alarms": 411,
+   "measured_arl_blocks": 138.42335766423358,
    "nominal_arl_blocks": 180.0,
-   "ratio": 0.6821964821964822
+   "ratio": 0.7690186536901865
+  },
+  "cusum/calibrated_audited": {
+   "audit_blocks": 51139,
+   "alarms": 369,
+   "measured_arl_blocks": 138.5880758807588,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.7699337548931044
   },
   "threshold/calibrated": {
-   "audit_blocks": 63608,
-   "alarms": 666,
-   "measured_arl_blocks": 95.50750750750751,
+   "audit_blocks": 56892,
+   "alarms": 437,
+   "measured_arl_blocks": 130.18764302059498,
    "nominal_arl_blocks": 180.0,
-   "ratio": 0.5305972639305973
+   "ratio": 0.7232646834477499
+  },
+  "threshold/calibrated_audited": {
+   "audit_blocks": 51139,
+   "alarms": 409,
+   "measured_arl_blocks": 125.03422982885085,
+   "nominal_arl_blocks": 180.0,
+   "ratio": 0.6946346101602825
   },
   "conformal_e/theory": {
-   "audit_blocks": 63608,
-   "alarms": 840,
-   "measured_arl_blocks": 75.72380952380952,
+   "audit_blocks": 56892,
+   "alarms": 692,
+   "measured_arl_blocks": 82.21387283236994,
    "nominal_arl_blocks": 180.0,
-   "ratio": 0.42068783068783067
+   "ratio": 0.4567437379576108
   }
  },
- "check_a_calibrated_within_tolerance": true,
- "check_a_inconclusive_too_few_alarms": false,
- "check_b_theory_threshold_valid": false,
- "passes": false,
- "note": ""
+ "detectors": {
+  "conformal_e": {
+   "verdict": "pass",
+   "devices": {
+    "Blink_Camera": "pass",
+    "Ecobee_Camera": "pass",
+    "M1T_Camera": "pass",
+    "Multifunctional_Pager": "pass",
+    "Owltron_Camera": "pass",
+    "SenseU": "pass",
+    "Singcall": "inconclusive",
+    "dev_192_168_137_185": "pass",
+    "dev_192_168_137_210": "inconclusive",
+    "dev_192_168_137_59": "pass"
+   },
+   "audited": 10,
+   "passed": 8,
+   "failed": [],
+   "inconclusive": [
+    "Singcall",
+    "dev_192_168_137_210"
+   ]
+  },
+  "cusum": {
+   "verdict": "fail",
+   "devices": {
+    "Blink_Camera": "pass",
+    "Ecobee_Camera": "pass",
+    "M1T_Camera": "pass",
+    "Multifunctional_Pager": "pass",
+    "Owltron_Camera": "pass",
+    "SenseU": "pass",
+    "Singcall": "inconclusive",
+    "dev_192_168_137_185": "fail",
+    "dev_192_168_137_210": "inconclusive",
+    "dev_192_168_137_59": "pass"
+   },
+   "audited": 10,
+   "passed": 7,
+   "failed": [
+    "dev_192_168_137_185"
+   ],
+   "inconclusive": [
+    "Singcall",
+    "dev_192_168_137_210"
+   ]
+  },
+  "threshold": {
+   "verdict": "fail",
+   "devices": {
+    "Blink_Camera": "pass",
+    "Ecobee_Camera": "pass",
+    "M1T_Camera": "fail",
+    "Multifunctional_Pager": "pass",
+    "Owltron_Camera": "pass",
+    "SenseU": "pass",
+    "Singcall": "inconclusive",
+    "dev_192_168_137_185": "pass",
+    "dev_192_168_137_210": "inconclusive",
+    "dev_192_168_137_59": "fail"
+   },
+   "audited": 10,
+   "passed": 6,
+   "failed": [
+    "M1T_Camera",
+    "dev_192_168_137_59"
+   ],
+   "inconclusive": [
+    "Singcall",
+    "dev_192_168_137_210"
+   ]
+  }
+ },
+ "passes": true,
+ "unmatched": [
+  "cusum",
+  "threshold"
+ ],
+ "not_confirmed": []
 }

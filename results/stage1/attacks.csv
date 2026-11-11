@@ -7,7 +7,6 @@ arp_spoofing__ARP_Spoofing_train__Blink_Camera,arp_spoofing,ARP_Spoofing,attacks
 arp_spoofing__ARP_Spoofing_train__Multifunctional_Pager,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,Multifunctional_Pager,41,640,5.495012044906616,4862.887326002121,6190.541867017746,16,True
 arp_spoofing__ARP_Spoofing_train__Singcall,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,Singcall,40,378,5.963279962539673,4862.449476957321,6190.541867017746,16,True
 arp_spoofing__ARP_Spoofing_train__SenseU,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,SenseU,12,12,6.687115907669067,4862.053547143936,6190.541867017746,16,False
-arp_spoofing__ARP_Spoofing_train__dev_192_168_137_243,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,dev_192_168_137_243,12,69710,6.677077054977417,4861.868918895721,6190.541867017746,16,False
 arp_spoofing__ARP_Spoofing_train__M1T_Camera,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,M1T_Camera,46,11276,6.401495933532715,5149.3653609752655,6190.541867017746,17,True
 arp_spoofing__ARP_Spoofing_train__dev_192_168_137_59,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,dev_192_168_137_59,12,168,4.889280080795288,4864.300853967667,6190.541867017746,16,False
 arp_spoofing__ARP_Spoofing_train__Owltron_Camera,arp_spoofing,ARP_Spoofing,attacks/train/ARP_Spoofing_train,train,Owltron_Camera,23,8790,5.932740926742554,6175.891772031784,6190.541867017746,20,True
@@ -28,7 +27,6 @@ recon__Recon-Ping_Sweep_train__Blink_Camera,recon,Recon-Ping_Sweep,attacks/train
 recon__Recon-Ping_Sweep_train__Multifunctional_Pager,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,Multifunctional_Pager,10,42,8.683840990066528,71.33715510368347,90.63233709335327,0,False
 recon__Recon-Ping_Sweep_train__Singcall,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,Singcall,21,22,10.762837886810303,73.41871118545532,90.63233709335327,0,True
 recon__Recon-Ping_Sweep_train__SenseU,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,SenseU,10,56,10.783241987228394,71.41146612167358,90.63233709335327,0,False
-recon__Recon-Ping_Sweep_train__dev_192_168_137_243,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,dev_192_168_137_243,21,21,10.99682903289795,73.34734296798706,90.63233709335327,0,True
 recon__Recon-Ping_Sweep_train__M1T_Camera,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,M1T_Camera,11,31,8.051117897033691,82.40737509727478,90.63233709335327,0,False
 recon__Recon-Ping_Sweep_train__Owltron_Camera,recon,Recon-Ping_Sweep,attacks/train/Recon-Ping_Sweep_train,train,Owltron_Camera,10,54,10.69923996925354,71.44263410568237,90.63233709335327,0,False
 recon__Recon-Port_Scan_train__broker,recon,Recon-Port_Scan,attacks/train/Recon-Port_Scan_train,train,broker,164890,331092,2532.4128119945526,78.41484212875366,2610.8276541233063,0,True
@@ -58,7 +56,6 @@ recon__Recon-Ping_Sweep_test__Blink_Camera,recon,Recon-Ping_Sweep,attacks/test/R
 recon__Recon-Ping_Sweep_test__Multifunctional_Pager,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,Multifunctional_Pager,3,14,0.8382010459899902,12.231621980667114,29.744991064071655,0,False
 recon__Recon-Ping_Sweep_test__Singcall,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,Singcall,6,6,2.877178907394409,14.095179080963135,29.744991064071655,0,False
 recon__Recon-Ping_Sweep_test__SenseU,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,SenseU,3,13,2.907341957092285,12.065777063369751,29.744991064071655,0,False
-recon__Recon-Ping_Sweep_test__dev_192_168_137_243,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,dev_192_168_137_243,6,6,3.0244228839874268,14.081995010375977,29.744991064071655,0,False
 recon__Recon-Ping_Sweep_test__M1T_Camera,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,M1T_Camera,2,7,12.093075037002563,5.135326862335205,29.744991064071655,0,False
 recon__Recon-Ping_Sweep_test__Owltron_Camera,recon,Recon-Ping_Sweep,attacks/test/Recon-Ping_Sweep_test,test,Owltron_Camera,3,18,2.8605308532714844,12.05005407333374,29.744991064071655,0,False
 recon__Recon-Port_Scan_test__broker,recon,Recon-Port_Scan,attacks/test/Recon-Port_Scan_test,test,broker,104900,207766,0.0,20.944859981536865,149.23971700668335,0,True
