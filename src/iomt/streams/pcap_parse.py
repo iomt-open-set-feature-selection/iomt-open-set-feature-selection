@@ -32,6 +32,9 @@ PKT_DTYPE = np.dtype([
 ])
 
 
+CHUNK_ROWS = 1_000_000  # rows held as Python tuples before they are packed into a numpy chunk
+
+
 def mac_u64(b: bytes) -> int:
     return int.from_bytes(b, "big")
 
@@ -58,6 +61,7 @@ def _reader(f):
 
 def parse_pcap(path: str, max_packets: int | None = None):
     rows = []
+    chunks = []
     append = rows.append
     n = 0
     truncated = False
@@ -67,6 +71,9 @@ def parse_pcap(path: str, max_packets: int | None = None):
             if max_packets is not None and n >= max_packets:
                 truncated = True
                 break
+            if len(rows) >= CHUNK_ROWS:
+                chunks.append(np.array(rows, dtype=PKT_DTYPE))
+                rows.clear()
             n += 1
             flen = len(buf)
             try:
@@ -93,7 +100,7 @@ def parse_pcap(path: str, max_packets: int | None = None):
                 proto, ttl, iphl, iplen = d.nxt, d.hlim, 40, d.plen + 40
                 l4 = d.data
             elif isinstance(d, dpkt.arp.ARP):
-                arp_op = d.op
+                arp_op = d.op if d.op < 256 else 0  # arp_op is u1; an out-of-range opcode must not abort the capture
                 if len(d.spa) == 4 and len(d.tpa) == 4:
                     spa, tpa = ip_u32(d.spa), ip_u32(d.tpa)
                 sha = mac_u64(d.sha) if len(d.sha) == 6 else 0
@@ -120,7 +127,8 @@ def parse_pcap(path: str, max_packets: int | None = None):
                     igmp = 1
             append((ts, flen, etype, smac, dmac, ipver, sip, dip, proto, ttl, iphl,
                     l4hl, iplen, plen, flags, sport, dport, arp_op, spa, tpa, sha, igmp))
-    arr = np.array(rows, dtype=PKT_DTYPE)
+    chunks.append(np.array(rows, dtype=PKT_DTYPE))
+    arr = np.concatenate(chunks)
     return arr, {"n_packets": int(n), "truncated": truncated, "parse_errors": errors}
 
 

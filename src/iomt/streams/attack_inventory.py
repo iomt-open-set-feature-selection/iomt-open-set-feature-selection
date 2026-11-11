@@ -13,7 +13,9 @@ Classes are counted at the protocol's family level (attack_set.non_flood) and,
 for information, at the capture-subtype level.
 
 Flood captures are only counted for volume, from the released CSV row counts
-(no need to parse 60 GB of floods for the gate).
+(no need to parse 60 GB of floods for the gate). Floods that have been parsed
+in full also get one ``flood_pairs`` row per (capture, target device); this is
+information only and does not enter the gate.
 
 Output: results/stage1/attack_inventory.json and attacks.csv
 """
@@ -32,7 +34,7 @@ from iomt.paths import INTERIM, STAGE1, ensure
 from iomt.streams.captures import DEFAULT_ROOT, list_captures
 from iomt.streams.device_map import (attacker_macs, device_ips_in, device_mask, load_inventory,
                                      outbound_mask, usable_devices)
-from iomt.streams.pcap_parse import load_packets, out_path
+from iomt.streams.pcap_parse import load_packets, out_path, u64_mac
 
 
 def family_map(cfg) -> dict[str, str]:
@@ -124,6 +126,36 @@ def run(cfg, interim=INTERIM, root=DEFAULT_ROOT, episode_seconds=300.0):
             r = csv_rows(Path(root), c)
             floods[c.family]["captures"] += 1
             floods[c.family]["csv_rows"] += r or 0
+    # top_src_macs ranks ALL inbound sources (cross-check); attacker_packets counts pinned attacker MACs only.
+    flood_pairs, flood_skipped = [], []
+    for c in list_captures():
+        if c.kind != "flood" or not out_path(interim, c.capture_id).exists():
+            continue
+        pk, meta = load_packets(interim, c.capture_id)
+        if meta.get("truncated"):
+            flood_skipped.append({"capture_id": c.capture_id, "reason": "parsed with a packet cap"})
+            continue
+        for h in hosts:
+            mac = [int(h["mac"].replace(":", ""), 16)]
+            # devices change IP between sessions: prefer the IPs the device sent from in this capture
+            sent = pk["src_ip"][(pk["src_mac"] == mac[0]) & (pk["src_ip"] != 0)]
+            ips_from = "capture" if len(sent) else "inventory"
+            ips = np.unique(sent).tolist() if len(sent) else device_ips_in(inv, h, c.capture_id)
+            m = device_mask(pk, ips, mac) & ~outbound_mask(pk, ips, mac)
+            if not m.any():
+                continue
+            src, ts = pk["src_mac"][m], pk["ts"][m]
+            ts = ts[np.isin(src, att)]
+            macs, cnt = np.unique(src, return_counts=True)
+            top = np.argsort(-cnt, kind="stable")[:3]
+            flood_pairs.append({
+                "capture_id": c.capture_id, "device_id": h["device_id"], "ips_from": ips_from,
+                "attacker_packets": int(len(ts)),
+                "first_attacker_ts": float(ts.min()) if len(ts) else None,
+                "last_attacker_ts": float(ts.max()) if len(ts) else None,
+                "top_src_macs": [{"mac": u64_mac(macs[i]), "packets": int(cnt[i])} for i in top],
+            })
+        del pk
     n_enough = sum(1 for v in per_family.values() if v["enough"])
     rep = {
         "protocol_sha256": P.sha256(),
@@ -136,6 +168,8 @@ def run(cfg, interim=INTERIM, root=DEFAULT_ROOT, episode_seconds=300.0):
         "passes": n_enough >= min_cls,
         "skipped_captures": skipped,
         "floods_from_released_csv": dict(floods),
+        "flood_pairs": flood_pairs,
+        "flood_skipped": flood_skipped,
         "attacks": attacks,
     }
     return rep, df
